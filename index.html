@@ -1314,7 +1314,6 @@ footer .footer-brand {
 
 <script>
 (function() {
-const TELEGRAM_TOKEN = "";
 const CATEGORIES = [
   {
     id: "alc", label: { bg: "Класически коктейли", en: "Classic Cocktails" },
@@ -1794,15 +1793,16 @@ document.getElementById("resForm").addEventListener("submit", function(e) {
             "\u{1F465} Гости: " + guests +
             (note ? "\n\u{1F4DD} Бележки: " + note : "");
 
-      fetch("https://api.telegram.org/bot/sendMessage", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: "1038618733",
-          text: msg,
-          parse_mode: "Markdown"
-        })
-      })
+      fetch("https://telegram-form.yourname.workers.dev", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: name,
+    message: message
+  })
+});
   .then(function() {
     btn.style.display = "none";
     document.getElementById("successMsg").style.display = "block";
