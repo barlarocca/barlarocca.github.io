@@ -1798,7 +1798,7 @@ document.getElementById("resForm").addEventListener("submit", function(e) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          text: msg,
+          msg: msg,
           parse_mode: "Markdown"
         })
       })
