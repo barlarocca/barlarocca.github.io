@@ -1314,6 +1314,7 @@ footer .footer-brand {
 
 <script>
 (function() {
+
 const CATEGORIES = [
   {
     id: "alc", label: { bg: "Класически коктейли", en: "Classic Cocktails" },
@@ -1793,16 +1794,14 @@ document.getElementById("resForm").addEventListener("submit", function(e) {
             "\u{1F465} Гости: " + guests +
             (note ? "\n\u{1F4DD} Бележки: " + note : "");
 
-      fetch("https://telegram-form.yourname.workers.dev", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    name: name,
-    message: message
-  })
-});
+    fetch("https://telegram-form.onlights123.workers.dev/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: msg,
+          parse_mode: "Markdown"
+        })
+      })
   .then(function() {
     btn.style.display = "none";
     document.getElementById("successMsg").style.display = "block";
