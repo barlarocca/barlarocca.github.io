@@ -688,8 +688,8 @@ footer .footer-brand {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(201,169,110,0.22) 0%, rgba(201,169,110,0.08) 65%, transparent 100%);
   box-shadow:
@@ -1433,6 +1433,67 @@ html, body {
   transition: color .3s;
 }
 .consent-link:hover { color: rgba(201,169,110,1); }
+
+.surprise-btn {
+  background:transparent; border:1px solid rgba(201,169,110,0.5);
+  background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  font-family:var(--ff-body); font-size:.65rem; letter-spacing:.28em; text-transform:uppercase;
+  cursor:pointer; padding:.75rem 2rem;
+  filter:drop-shadow(0 0 8px rgba(201,169,110,0.35));
+  transition:filter .3s, border-color .3s;
+}
+.surprise-btn:hover { filter:drop-shadow(0 0 18px rgba(201,169,110,0.7)); border-color:rgba(201,169,110,0.85); }
+.surprise-hint { font-size:.52rem; letter-spacing:.15em; color:rgba(201,169,110,0.7); text-shadow:0 0 8px rgba(201,169,110,0.3); margin-top:.4rem; text-transform:uppercase; }
+#surpriseOverlay { display:none; position:fixed; inset:0; z-index:99990; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); align-items:center; justify-content:center; height:100dvh; }
+#surpriseOverlay.open { display:flex; }
+#surpriseModal { background:linear-gradient(160deg,#1c1510 0%,#0e0c0a 55%,#1a1208 100%); border:1px solid rgba(201,169,110,0.4); border-radius:6px; padding:2rem 1.8rem; max-width:400px; width:90vw; max-height:85vh; overflow-y:auto; text-align:center; animation:surpriseIn .3s ease; position:relative; }
+@keyframes surpriseIn { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
+.surprise-modal-title { font-family:var(--ff-display); font-size:1.4rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 10px rgba(201,169,110,0.4)); margin-bottom:1.5rem; }
+.surprise-choice-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.surprise-choice-btn { padding:.7rem 1.4rem; border:1px solid rgba(201,169,110,0.45); background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-family:var(--ff-body); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; filter:drop-shadow(0 0 6px rgba(201,169,110,0.25)); transition:filter .3s,border-color .3s; border-radius:3px; }
+.surprise-choice-btn:hover { filter:drop-shadow(0 0 14px rgba(201,169,110,0.6)); border-color:rgba(201,169,110,0.8); }
+.surprise-slot { font-family:var(--ff-display); font-size:1.6rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 14px rgba(201,169,110,0.6)); min-height:2.4rem; display:flex; align-items:center; justify-content:center; margin:1rem 0; overflow:visible; }
+.surprise-result { display:none; animation:revealCard .5s ease forwards; }
+@keyframes revealCard { from{opacity:0;transform:scale(0.9)} to{opacity:1;transform:scale(1)} }
+.surprise-result-name { font-family:var(--ff-display); font-size:2rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 16px rgba(201,169,110,0.6)); margin-bottom:.5rem; }
+.surprise-result-ing { font-size:.65rem; color:rgba(220,205,180,0.88); font-style:italic; line-height:1.8; margin-bottom:1.2rem; word-wrap:break-word; white-space:normal; overflow:visible; display:block; }
+.surprise-again-btn { padding:.55rem 1.4rem; border:1px solid rgba(201,169,110,0.45); background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-family:var(--ff-body); font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; filter:drop-shadow(0 0 6px rgba(201,169,110,0.3)); transition:filter .3s; border-radius:3px; }
+.surprise-close { position:absolute; top:.7rem; right:1rem; background:none; border:none; color:rgba(201,169,110,0.5); font-size:1.2rem; cursor:pointer; transition:color .3s; }
+.surprise-close:hover { color:rgba(201,169,110,1); }
+
+.surprise-price-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  margin: .8rem auto 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+.surprise-price-eur {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.98);
+  text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 22px rgba(255,255,255,0.25), 0 0 40px rgba(201,169,110,0.2);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.surprise-price-bgn {
+  display: block;
+  font-size: .65rem;
+  color: rgba(200,190,175,0.9);
+  letter-spacing: .04em;
+  line-height: 1.2;
+  font-family: var(--ff-display);
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(200,190,175,0.5), 0 0 20px rgba(200,190,175,0.2);
+}
 </style>
 </head>
 <body>
@@ -1580,6 +1641,10 @@ html, body {
     <h2 class="section-h t-menu-h">Нашето <em class="fancy-gold">Меню</em></h2>
     <div class="divider"></div>
     <div class="menu-tabs" id="menuTabs"></div>
+    <div style="text-align:center;margin:1.5rem 0 .5rem;">
+      <button id="surpriseBtn" onclick="openSurprise()" class="surprise-btn t-surprise-btn">Изненадай ме</button>
+      <p class="surprise-hint t-surprise-hint">Избери случаен коктейл</p>
+    </div>
     <div id="menuContent"></div>
   </div>
 </section>
@@ -1996,7 +2061,7 @@ var UI = {
     ".t-city":"Chernomorets Center, Bulgaria",
     ".t-est":"Cocktail Bar — 20+ years of history",
     ".t-tag":"The emblem of nightlife in Chernomorets",
-    ".t-cta":"Reserve a Table", ".t-place-nav":"The Place", ".t-spin-hint":"Tap the wheel to spin",
+    ".t-cta":"Reserve a Table", ".t-place-nav":"The Place", ".t-spin-hint":"Tap the wheel to spin", ".t-surprise-btn":"Surprise Me", ".t-surprise-hint":"Pick a random cocktail", ".t-surprise-title":"Alcoholic or Non-Alcoholic?", ".t-surprise-alc":"Alcoholic", ".t-surprise-non":"Non-Alcoholic", ".t-surprise-again":"Again",
     ".t-story-tag":"Our Story",
     ".t-f1":"Refreshing cocktails and diverse drinks",
     ".t-f2":"Energetic atmosphere with great music",
@@ -3077,7 +3142,7 @@ var COLORS = [
   <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;">
     <p style="font-size:.62rem;letter-spacing:.08em;color:rgba(220,205,180,0.85);line-height:1.6;margin:0;flex:1;min-width:220px;">
       Този сайт използва бисквитки за правилна работа, резервации и показване на Google Maps. Можете да приемете всички или само необходимите.
-      <a href="/privacy/#cookies" target="_blank" style="color:rgba(201,169,110,0.8);text-decoration:underline;margin-left:.3rem;">Политика за бисквитки</a>
+      <a href="Privacy_Policy.html" target="_blank" style="color:rgba(201,169,110,0.8);text-decoration:underline;margin-left:.3rem;">Политика за бисквитки</a>
     </p>
     <div style="display:flex;gap:.6rem;flex-shrink:0;flex-wrap:wrap;">
       <button onclick="acceptCookies('all')" style="padding:.5rem 1.2rem;border:1px solid rgba(201,169,110,0.55);background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:var(--ff-body);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;filter:drop-shadow(0 0 6px rgba(201,169,110,0.3));">Приемам</button>
@@ -3101,5 +3166,108 @@ function acceptCookies(type) {
 }
 </script>
 
+<!-- SURPRISE ME MODAL -->
+<div id="surpriseOverlay" onclick="closeSurpriseEv(event)">
+  <div id="surpriseModal">
+    <button class="surprise-close" onclick="closeSurprise()">&#x2715;</button>
+    <div id="surpriseStep1">
+      <div class="surprise-choice-btns">
+        <button class="surprise-choice-btn" onclick="startSurprise('alc')">&#x1F378; <span class="t-surprise-alc">&#x0410;&#x043b;&#x043a;&#x043e;&#x0445;&#x043e;&#x043b;&#x043d;&#x043e;</span></button>
+        <button class="surprise-choice-btn" onclick="startSurprise('non')">&#x1F9C3; <span class="t-surprise-non">&#x0411;&#x0435;&#x0437;&#x0430;&#x043b;&#x043a;&#x043e;&#x0445;&#x043e;&#x043b;&#x043d;&#x043e;</span></button>
+      </div>
+    </div>
+    <div id="surpriseStep2" style="display:none;">
+      <div class="surprise-slot" id="surpriseSlot">&#x2014;</div>
+      <div class="surprise-result" id="surpriseResult">
+        <div id="surpriseBadge" style="min-height:1.5rem;margin-bottom:.3rem;"></div><div class="surprise-result-name" id="surpriseResultName"></div>
+        <div class="surprise-result-ing" id="surpriseResultIng"></div>
+        <div class="surprise-price-wrap"><span class="surprise-price-eur" id="surprisePriceEur"></span><span class="surprise-price-bgn" id="surprisePriceBgn"></span></div>
+        <button class="surprise-again-btn t-surprise-again" onclick="resetSurprise()">&#x21BA; &#x041e;&#x0442;&#x043d;&#x043e;&#x0432;&#x043e;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var SURPRISE_ALC = [
+  {bg:"Текила Сънрайз",en:"Tequila Sunrise",badge:null,desc:{bg:"текила, сок портокал, гренадин | 250мл | 5.50€ / 10.76лв",en:"tequila, orange juice, grenadine | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Блъди Мери",en:"Bloody Mary",badge:null,desc:{bg:"водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 5.50€ / 10.76лв",en:"vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Мохито",en:"Mojito",badge:null,desc:{bg:"ром, мента, лайм, сироп кафява захар, сода | 250мл | 5.50€ / 10.76лв",en:"rum, mint, lime, brown sugar syrup, soda | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Дайкири",en:"Daiquiri",badge:"hot",desc:{bg:"ром, захарен сироп, лайм | 180мл | 5.00€ / 9.78лв",en:"rum, sugar syrup, lime | 180ml | 5.00€ / 9.78lv"}},
+  {bg:"Лонг Айланд",en:"Long Island",badge:null,desc:{bg:"джин, водка, ром, текила, кола, лайм, коантро | 250мл | 7.00€ / 13.69лв",en:"gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 7.00€ / 13.69lv"}},
+  {bg:"Синя Лагуна",en:"Blue Lagoon",badge:"hot",desc:{bg:"водка, синьо кюрасо, лайм, спрайт | 250мл | 5.50€ / 10.76лв",en:"vodka, blue curacao, lime, sprite | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Пина Колада",en:"Pina Colada",badge:null,desc:{bg:"ром, ананас, ликьор кокос, лайм | 250мл | 5.50€ / 10.76лв",en:"rum, pineapple, coconut liqueur, lime | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Бял Руснак",en:"White Russian",badge:null,desc:{bg:"водка, калуа, мляко, сметана, индийски орех | 160мл | 5.50€ / 10.76лв",en:"vodka, kahlua, milk, cream, nutmeg | 160ml | 5.50€ / 10.76lv"}},
+  {bg:"Палома",en:"Paloma",badge:"new",desc:{bg:"текила, лимонада грейпфрут, лайм, Tajín | 250мл | 7.00€ / 13.69лв",en:"tequila, grapefruit lemonade, lime, Tajín | 250ml | 7.00€ / 13.69lv"}},
+  {bg:"Маргарита",en:"Margarita",badge:"hot",desc:{bg:"текила, коантро, лайм, сол | 180мл | 5.50€ / 10.76лв",en:"tequila, cointreau, lime, salt | 180ml | 5.50€ / 10.76lv"}},
+  {bg:"Куба Либре",en:"Cuba Libre",badge:null,desc:{bg:"тъмен ром, кола, лайм | 250мл | 5.00€ / 9.78лв",en:"dark rum, cola, lime | 250ml | 5.00€ / 9.78lv"}},
+  {bg:"Аперол Шприц",en:"Aperol Spritz",badge:"hot",desc:{bg:"просеко, аперол, портокал, сода | 250мл | 5.00€ / 9.78лв",en:"prosecco, aperol, orange, soda | 250ml | 5.00€ / 9.78lv"}}
+];
+var SURPRISE_NON = [
+  {bg:"Ягодов Оргазъм",en:"Strawberry Dream",badge:"hot",desc:{bg:"сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана | 250мл | 4.50€ / 8.80лв",en:"ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, lime, cream | 250ml | 4.50€ / 8.80lv"}},
+  {bg:"Тропическо Мангово Маце",en:"Tropical Mango",badge:"new",desc:{bg:"пюре от манго, банан, мляко, мед, лайм, сметана | 250мл | 5.00€ / 9.78лв",en:"mango puree, banana, milk, honey, lime, cream | 250ml | 5.00€ / 9.78lv"}},
+  {bg:"Пинк Бери Тоник",en:"Pink Berry Tonic",badge:"new",desc:{bg:"ягоди, малини, лимон, лайм, розов тоник, гренадин | 250мл | 5.50€ / 10.76лв",en:"strawberries, raspberries, lemon, lime, pink tonic, grenadine | 250ml | 5.50€ / 10.76lv"}},
+  {bg:"Еспресо Мохито",en:"Espresso Mojito",badge:"new",desc:{bg:"мента, лайм, спрайт, еспресо | 250мл | 5.50€ / 10.76лв",en:"mint, lime, sprite, espresso | 250ml | 5.50€ / 10.76lv"}}
+];
+
+function openSurprise() {
+  document.getElementById('surpriseStep1').style.display='block';
+  document.getElementById('surpriseStep2').style.display='none';
+  document.getElementById('surpriseOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeSurprise() {
+  document.getElementById('surpriseOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeSurpriseEv(e) { if(e.target===document.getElementById('surpriseOverlay')) closeSurprise(); }
+function resetSurprise() {
+  document.getElementById('surpriseStep1').style.display='block';
+  document.getElementById('surpriseStep2').style.display='none';
+}
+function startSurprise(type) {
+  var pool = type==='alc' ? SURPRISE_ALC : SURPRISE_NON;
+  var winner = pool[Math.floor(Math.random()*pool.length)];
+  var lang = window.currentLang||'bg';
+  document.getElementById('surpriseStep1').style.display='none';
+  document.getElementById('surpriseStep2').style.display='block';
+  document.getElementById('surpriseResult').style.display='none';
+  var slot = document.getElementById('surpriseSlot');
+  slot.style.display='flex';
+  var names = pool.map(function(c){return lang==='bg'?c.bg:c.en;});
+  var i=0, speed=60, elapsed=0, total=1800;
+  function tick(){
+    slot.textContent=names[i%names.length]; i++;
+    elapsed+=speed;
+    if(elapsed>total*0.6) speed=60+Math.floor((elapsed-total*0.6)/(total*0.4)*220);
+    if(elapsed<total){setTimeout(tick,speed);}
+    else{
+      slot.textContent=lang==='bg'?winner.bg:winner.en;
+      setTimeout(function(){
+        slot.style.display='none';
+        var badgeHtml = '';
+        if(winner.badge==='hot') badgeHtml='<span class="badge-hot"><span class="badge-icon">&#11088;</span> '+(lang==='bg'?'Най-поръчван':'Top Pick')+'</span>';
+        else if(winner.badge==='new') badgeHtml='<span class="badge-new"><span class="badge-icon">&#x1f525;</span> '+(lang==='bg'?'Ново':'New')+'</span>';
+        document.getElementById('surpriseBadge').innerHTML=badgeHtml;
+        document.getElementById('surpriseResultName').textContent=lang==='bg'?winner.bg:winner.en;
+        var descFull = lang==='bg'?winner.desc.bg:winner.desc.en;
+        var parts = descFull.split(' | ');
+        var ingText = parts[0] || descFull;
+        var sizeText = parts[1] || '';
+        var priceText = parts[2] || '';
+        var eurMatch = priceText.match(/([\d.]+)€/);
+        var bgnMatch = priceText.match(/([\d.]+)(?:lv|лв)/);
+        document.getElementById('surpriseResultIng').textContent = ingText + (sizeText ? ' · ' + sizeText : '');
+        document.getElementById('surprisePriceEur').textContent = eurMatch ? '€' + eurMatch[1] : '';
+        document.getElementById('surprisePriceBgn').textContent = bgnMatch ? bgnMatch[1] + (lang==='bg'?' лв':' lv') : '';
+        var res=document.getElementById('surpriseResult');
+        res.style.display='block'; res.style.animation='none';
+        res.offsetHeight; res.style.animation='revealCard .5s ease forwards';
+        if(navigator.vibrate)navigator.vibrate([80,40,80]);
+      },300);
+    }
+  }
+  tick();
+}
+</script>
 </body>
 </html>
