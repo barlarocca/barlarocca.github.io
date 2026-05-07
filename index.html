@@ -171,7 +171,7 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:2.2re
   /* ── PROMO ── */
   .promo-inner { padding: 4rem 1.1rem; }
   .wheel-wrap { width: 280px; height: 280px; }
-  #wheelCanvas { cursor: pointer; width: 280px !important; height: 280px !important; }
+  #wheelCanvas { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; user-select: none; width: 280px !important; height: 280px !important; }
     .modal-cocktail { font-size: 1.4rem; }
 
   /* ── FORM ── */
@@ -221,7 +221,7 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:2.2re
   z-index: 10;
   filter: drop-shadow(0 0 6px rgba(201,169,110,0.6));
 }
-#wheelCanvas { cursor: pointer;
+#wheelCanvas { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; user-select: none;
   display: block; width: 320px; height: 320px;
   border-radius: 50%;
   box-shadow:
@@ -295,7 +295,7 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:2.2re
 @media(max-width:768px) {
   .promo-inner { padding: 4rem 1.2rem; }
   .wheel-wrap  { width: 280px; height: 280px; }
-  #wheelCanvas { cursor: pointer; width: 280px; height: 280px; }
+  #wheelCanvas { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; user-select: none; width: 280px; height: 280px; }
 }
 
 /* ─── WINNER MODAL ─── */
@@ -1028,7 +1028,7 @@ footer .footer-brand {
   pointer-events: none;
   z-index: 999998;
 }
-#wheelCanvas { cursor: pointer;
+#wheelCanvas { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; user-select: none;
   will-change: contents;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -1643,6 +1643,8 @@ html, body {
 .fc img { animation: fcPulse 3s ease-in-out infinite !important; }
 #fc3 img, #fc5 img, #fc7 img  { animation-delay: 1s !important; }
 #fc4 img, #fc6 img, #fc10 img { animation-delay: 2s !important; }
+
+* { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
 </style>
 </head>
 <body>
