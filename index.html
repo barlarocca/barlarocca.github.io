@@ -2354,7 +2354,7 @@ function unlockBodyScroll() {
     <p class="section-tag t-promo-tag" style="text-align:center;margin-bottom:.8rem">Специална оферта</p>
     <h2 class="promo-title t-promo-h">Завърти колелото на <em><span class="fancy-gold">късмета</span></em></h2>
     <p class="promo-desc t-promo-desc">
-      Завърти колелото на късмета и спечели 10% отстъпка на случаен коктейл. Имаш право на 1 опит на ден. Отстъпката важи само веднъж дневно за спечеления коктейл. Ако попаднеш на "Опитай пак", можеш да пробваш отново утре.
+      Завърти колелото на късмета и спечели 10% отстъпка на случаен алкохолен коктейл. Имаш право на 1 опит на ден. Отстъпката важи само веднъж дневно за спечеления коктейл. Ако попаднеш на "Опитай пак", можеш да пробваш отново утре.
     </p>
     <div class="wheel-wrap">
       <div class="wheel-ring-outer"></div>
@@ -3203,7 +3203,7 @@ var COLORS = [
 
   var currentAngle = 0;
   var spinning     = false;
-  var COOLDOWN_MS  = 0; /* TESTING — restore: 5 * 60 * 60 * 1000 */
+  var COOLDOWN_MS  = 8 * 60 * 60 * 1000; /* TESTING — restore: 5 * 60 * 60 * 1000 */
   var STORAGE_KEY  = "larocca_spin_time";
 
   /* Check localStorage on load */
@@ -3527,15 +3527,6 @@ var COLORS = [
         showModal(winner);
         saveSpinTime();
         updateCooldownUI();
-        var hint = document.querySelector(".promo-spin-hint");
-        if (hint) {
-          var hl = window.currentLang || "bg";
-          hint.textContent = hl === "en"
-            ? "Your daily spin has been used. See you tomorrow."
-            : "Дневният ви опит е изчерпан. Очакваме ви отново утре.";
-          hint._spun = true;
-          hint.style.color = "rgba(201,169,110,0.6)";
-        }
       }
     }
     requestAnimationFrame(animate);
@@ -3787,34 +3778,7 @@ var COLORS = [
 })();
 </script>
 
-<!-- COOKIE BANNER -->
-<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999998;background:linear-gradient(180deg,rgba(14,12,10,0.97),rgba(20,16,10,0.99));border-top:1px solid rgba(201,169,110,0.25);padding:1.2rem 1.5rem;backdrop-filter:blur(8px);">
-  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;">
-    <p style="font-size:.62rem;letter-spacing:.08em;color:rgba(220,205,180,0.85);line-height:1.6;margin:0;flex:1;min-width:220px;">
-      Този сайт използва бисквитки за правилна работа, резервации и показване на Google Maps. Можете да приемете всички или само необходимите.
-      <a href="Privacy_Policy.html" target="_blank" style="color:rgba(201,169,110,0.8);text-decoration:underline;margin-left:.3rem;">Политика за бисквитки</a>
-    </p>
-    <div style="display:flex;gap:.6rem;flex-shrink:0;flex-wrap:wrap;">
-      <button onclick="acceptCookies('all')" style="padding:.5rem 1.2rem;border:1px solid rgba(201,169,110,0.55);background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:var(--ff-body);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;filter:drop-shadow(0 0 6px rgba(201,169,110,0.3));">Приемам</button>
-      <button onclick="acceptCookies('necessary')" style="padding:.5rem 1.2rem;border:1px solid rgba(180,170,160,0.3);background:transparent;color:rgba(180,170,160,0.7);font-family:var(--ff-body);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Само необходими</button>
-    </div>
-  </div>
-</div>
-<script>
-(function() {
-  var consent = null;
-  try { consent = localStorage.getItem('larocca_cookies'); } catch(e) {}
-  if (!consent) {
-    var banner = document.getElementById('cookieBanner');
-    if (banner) banner.style.display = 'block';
-  }
-})();
-function acceptCookies(type) {
-  try { localStorage.setItem('larocca_cookies', type); } catch(e) {}
-  var banner = document.getElementById('cookieBanner');
-  if (banner) { banner.style.opacity = '0'; banner.style.transition = 'opacity .4s'; setTimeout(function(){ banner.style.display = 'none'; }, 400); }
-}
-</script>
+
 
 <!-- SURPRISE ME MODAL -->
 <div id="surpriseOverlay" onclick="closeSurpriseEv(event)">
