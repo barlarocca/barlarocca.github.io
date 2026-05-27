@@ -981,6 +981,17 @@ footer .footer-brand {
         display: none !important;
         width: 0 !important;
     }
+    .var-pill-platinum {
+        background: rgba(255,255,255,0.08);
+        color: rgba(240,225,200,0.95);
+        border-color: rgba(240,225,200,0.3);
+    }
+
+        .var-pill-platinum::before {
+            content: none !important;
+            display: none !important;
+            width: 0 !important;
+        }
     .var-pill-orangecit {
         background: rgba(255,140,40,0.16);
         color: rgba(255,190,120,0.98);
@@ -2955,7 +2966,8 @@ const CATEGORIES = [
       { name: { bg: "Савой БГ", en: "Savoy BG" },       desc: { bg: "", en: "" }, variants: ["blue"], size: "50мл", price: 3.00 },
       { name: { bg: "Финландия", en: "Finlandia" },      desc: { bg: "", en: "" }, size: "50мл", price: 4.00 },
       { name: { bg: "Абсолют", en: "Absolut" },          desc: { bg: "", en: "" }, variants: ["classic_abs","vanilla"], size: "50мл", price: 4.00 },
-      { name: { bg: "Руски Стандарт", en: "Russian Standard" }, desc: { bg: "", en: "" }, size: "50мл", price: 4.50 },
+        { name: { bg: "Руски Стандарт", en: "Russian Standard" }, desc: { bg: "", en: "" },variants:["classic1"], size: "50мл", price: 4.50 },
+        { name: { bg: "Руски Стандарт Платинум", en: "Russian Standard Platinum" }, desc: { bg: "", en: "" }, variants: ["platinum"], size: "50мл", price: 4.50 },
       { name: { bg: "Смирноф", en: "Smirnoff" },         desc: { bg: "", en: "" }, variants: ["red"], size: "50мл", price: 4.00 },
       { name: { bg: "Белуга", en: "Beluga" },             desc: { bg: "", en: "" }, size: "50мл", price: 6.50 },
       { name: { bg: "Рейка", en: "Reyka" },               desc: { bg: "", en: "" }, size: "50мл", price: 5.00 },
@@ -3102,8 +3114,7 @@ const CATEGORIES = [
         { name: { bg: "Сода Кинли",           en: "Kinley Soda"    }, desc: { bg: "",    en: ""    }, size: "250мл", price: 2.00 },
         { name: { bg: "Кока Кола",            en: "Coca-Cola"      }, desc: { bg: "",      en: ""      }, size: "250мл", price: 2.00 },
         { name: { bg: "Кока Кола Зеро",       en: "Coca-Cola Zero" }, desc: { bg: "", en: "" }, size: "250мл", price: 2.00 },
-        { name: { bg: "Фанта Лимон",          en: "Fanta Lemon"    }, desc: { bg: "",    en: ""    }, size: "250мл", price: 2.00 },
-        { name: { bg: "Фанта Портокал",       en: "Fanta Orange"   }, desc: { bg: "",   en: ""   }, size: "250мл", price: 2.00 },
+        { name: { bg: "Фанта",          en: "Fanta"    }, desc: { bg: "",    en: ""    },variants:["lemon","orangecit"], size: "250мл", price: 2.00 },
           { name: { bg: "Боржоми", en: "Borjomi" }, desc: { bg: "Минерална вода от Грузия, богата на соли и минерали", en: "Mineral water from Georgia, rich in salts and minerals"        }, size: "330мл", price: 2.50 },
           { name: { bg: "Перие", en: "Perrier" }, desc: { bg: "Естествено газирана изворна вода от Южна Франция", en: "Naturally sparkling spring water from Southern France"        }, size: "330мл", price: 3.00 },
         { name: { bg: "Минерална вода Девин", en: "Devin Mineral Water" }, desc: { bg: "", en: "" }, size: "500мл", price: 1.50 },
@@ -3336,6 +3347,7 @@ function renderItem(item, lang) {
       tomato: { bg: '\uD83C\uDF45 Домат', en: '\uD83C\uDF45 Tomato' },
       chocolate: { bg: '\uD83C\uDF6B Шоколад', en: '\uD83C\uDF6B Chocolate' },
       classic1: { bg: '\uD83C\uDF79 Класик', en: '\uD83C\uDF79 Classic' },
+      platinum: { bg: '\uD83D\uDC8E Платинум', en: '\uD83D\uDC8E Platinum' },
 
   };
     var varPillClass = {
@@ -3372,6 +3384,7 @@ function renderItem(item, lang) {
         tomato: 'var-pill-tomato',
         chocolate: 'var-pill-chocolate',
         classic1: 'var-pill-classic1',
+        platinum: 'var-pill-platinum',
     };
   var varPills = '';
     if (item.variants && item.variants.length) {
@@ -3384,7 +3397,7 @@ function renderItem(item, lang) {
   var logo = item.logoClass === 'whisky-logo-img' ? '<div style="display:flex;gap:.2rem;align-items:center;margin:.3rem 0 .1rem;justify-content:flex-start;"><img src="' + item.logo + '" class="prod-logo ' + item.logoClass + '" alt="">' + (item.logo2 ? '<img src="' + item.logo2 + '" class="prod-logo ' + item.logoClass + '" alt="">' : '') + '</div>' : item.logoClass ? '<img src="' + item.logo + '" class="prod-logo ' + item.logoClass + '" style="' + (item.logoClass === 'wines-logo' ? 'height:70px;width:auto;display:block;' : item.logoClass === 'choc-logo' ? 'height:25px;width:auto;display:block;' : '') + '" alt="">' : item.logo ? '<img src="' + item.logo + '" class="prod-logo" alt="">' : "";
   var displayName = (typeof item.name === 'object') ? item.name[lang] : item.name;
     var displaySize = (item.size != null && item.size !== '')
-        ? String(item.size)
+        ? (lang === 'en' ? String(item.size).replace('мл', 'ml').replace('г', 'g') : String(item.size))
         : '';
     return '<div class="prod-item">' +
         '<div class="prod-info">' +
@@ -4569,7 +4582,7 @@ var SURPRISE_ALC = [
   {bg:"Кадифена Праскова",en:"Velvet Peach",badge:"hot",taste:"both",desc:{bg:"свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 7.50€ / 14.67лв",en:"fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 7.50€ / 14.67 BGN"}},
     { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, сода | 250мл | 7.00€ / 13.69лв", en:"limoncello, lychee liqueur, prosecco, soda | 180ml | 7.00€ / 13.69 BGN"}},
   {bg:"Секс с Мръсницата",en:"Sex with the Dirty One",badge:"hot",taste:"sweet",desc:{bg:"водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 6.00€ / 11.73лв",en:"vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 6.00€ / 11.73 BGN"}},
-  {bg:"Секс на Плажа",en:"Sex on the Beach",badge:"hot",taste:"sweet",desc:{bg:"водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 6.00€ / 11.73лв",en:"vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 6.00€ / 11.73 BGN"}}
+  {bg:"Секс на Плажа",en:"Sex on the Beach",badge:"hot",taste:"sweet",desc:{bg:"водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 6.00€ / 11.73лв",en:"vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 6.00€ / 11.73 BGN"}},
   {bg:"Оргазъм",en:"Orgasm",badge:null,taste:"creamy",desc:{bg:"бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 6.50€ / 12.71лв",en:"baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 6.50€ / 12.71 BGN"}}
 ];
 var SURPRISE_NON = [
