@@ -87,7 +87,7 @@ nav.scrolled { background:rgba(8,8,8,.97); border-bottom:1px solid var(--border)
 .prod-item { display:flex; justify-content:space-between; align-items:baseline; gap:1.5rem; padding:1.4rem 0; border-bottom:none; transition:all .3s; position:relative; }.prod-item::after { content:""; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:65%; height:1px; background:linear-gradient(90deg,transparent,rgba(201,169,110,0.4),rgba(255,220,80,0.5),rgba(201,169,110,0.4),transparent); box-shadow:0 0 6px rgba(201,169,110,0.2); }.prod-item:last-child::after { display:none; }
 .prod-item:nth-child(odd) { padding-right:2.5rem; }
 .prod-item:nth-child(even) { padding-left:2.5rem; border-left:1px solid var(--border); }
-.prod-item:hover .prod-name { color:rgba(226,200,153,0.98); font-size:1.0rem; text-shadow:0 0 10px rgba(201,169,110,0.3); }
+.prod-item:hover .prod-name { color:rgba(226,200,153,0.98); font-size:1.5rem; text-shadow:0 0 10px rgba(201,169,110,0.3); }
 .prod-info { flex:1; min-width:0; }
 .prod-name { font-family:var(--ff-display); font-size:1.08rem; font-weight:400; color:var(--cream); display:block; transition:color .3s; }
 .prod-desc { font-size:.8rem; color:rgba(240,225,200,1); text-shadow:0 0 10px rgba(240,225,195,0.3), 0 0 20px rgba(240,225,195,0.12); margin-top:.2rem; font-style:italic; line-height:1.5;  white-space:pre-line; }
@@ -672,7 +672,7 @@ footer .footer-brand {
 
         font-family: 'Russo One', sans-serif;
         /* 👉 ако имаш custom font → ще се активира */
-        text-shadow: 0 0 10px rgba(201,169,110,0.5);
+        text-shadow: 0 0 10px rgba(201,169,110,0.5),;
     }
 /* ─── BLOB FLOATING ANIMATIONS ─── */
 @keyframes floatA {
@@ -2906,7 +2906,7 @@ const CATEGORIES = [
       { name: { bg: "Лонг Айланд", en: "Long Island" },       desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро",en: "gin, vodka, rum, tequila, cola, lime, cointreau" }, size: "250мл", price: 7.00 , taste: "both" },
       { badge: true, name: { bg: "Синя Лагуна", en: "Blue Lagoon" },       desc: { bg: "водка, синьо кюрасо, лайм, спрайт",            en: "vodka, blue curacao, lime, sprite"               }, size: "250мл", price: 5.50 , taste: "sweet" },
       { name: { bg: "Пина Колада", en: "Piña Colada" },       desc: { bg: "ром, ананас, ликьор кокос, лайм",              en: "rum, pineapple, coconut liqueur, lime"           }, size: "250мл", price: 5.50 , taste: "sweet" },
-      { name: { bg: "Бял Руснак", en: "White Russian" },        desc: { bg: "водка, калуа, мляко, сметана, индийски орех",  en: "vodka, kahlúa, milk, cream, coconut"             }, size: "160мл", price: 5.50 , taste: "creamy" },
+    
             { badge: "new", name: { bg: "Палома", en: "Paloma" }, desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín", en: "tequila, grapefruit lemonade, lime, Tajín" }, size: "250мл", price: 7.00 , taste: "fresh" },
       { badge: true, name: { bg: "Маргарита", en: "Margarita" },         desc: { bg: "текила, коантро, лайм, сол",    en: "tequila, cointreau, lime, salt"    },variants: ['classic1','spicy'], size: "180мл", price: 5.50, note: { bg: "", en: "" }, taste: "fresh" },
       { name: { bg: "Куба Либре", en: "Cuba Libre" },        desc: { bg: "тъмен ром, кола, лайм",                        en: "dark rum, cola, lime"                           }, size: "250мл", price: 5.00 , taste: "both" },
@@ -2927,7 +2927,7 @@ const CATEGORIES = [
     items: [
       { name: { bg: "Зелен Хлад", en: "Green Chill" },      desc: { bg: "джин, лайм, краставица, мента, захарен сироп с розмарин, тоник", en: "gin, lime, cucumber, mint, rosemary syrup, tonic" }, size: "180мл", price: 7.00 , taste: "fresh" },
       { badge: true, name: { bg: "Кадифена Праскова", en: "Velvet Peach" },desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко",             en: "fresh peach, peach purée, licor 43, prosecco"       }, size: "250мл", price: 7.50 , taste: "both" },
-      { name: { bg: "Ягодов Облак", en: "Strawberry Cloud" },    desc: { bg: "ягодов ликьор, свежи ягоди, водка, лайм, сироп ягода, захарен памук", en: "strawberry liqueur, fresh strawberries, vodka, lime, syrup, cotton candy" }, size: "180мл", price: 7.00 , taste: "sweet" },
+        { badge: "new", name: { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz" }, desc: { bg: "лимончело, ликьор личи, просеко, сода", en: "limoncello, lychee liqueur, prosecco, soda" }, size: "250мл", price: 7.00 , taste: "both" },
     ]
   },
   {
@@ -2935,7 +2935,6 @@ const CATEGORIES = [
     items: [
       { badge: true, name: { bg: "Секс с Мръсницата", en: "Sex with the Dirty One" }, desc: { bg: "водка, ликьор пъпеш, гренадин, сок ананас, лайм",             en: "vodka, melon liqueur, grenadine, pineapple juice, lime" }, size: "250мл", price: 6.00 , taste: "sweet" },
       { badge: true, name: { bg: "Секс на Плажа", en: "Sex on the Beach" },     desc: { bg: "водка, сок ананас, сок праскова, гренадин, ликьор праскова",   en: "vodka, pineapple juice, peach juice, grenadine, peach liqueur" }, size: "250мл", price: 6.00 , taste: "sweet" },
-      { name: { bg: "Отворени Бедра", en: "Slippery Thighs" },    desc: { bg: "водка, сок ананас, сок вишна, лайм, гренадин",                 en: "vodka, pineapple juice, cherry juice, lime, grenadine" }, size: "180мл", price: 6.00 , taste: "both" },
       { name: { bg: "Оргазъм", en: "Orgasm" },           desc: { bg: "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана", en: "baileys, kahlúa, ice cream, banana, malibu, vodka, milk, cream" }, size: "250мл", price: 6.50 , taste: "creamy" },
     ]
   },
@@ -3046,7 +3045,7 @@ const CATEGORIES = [
         { name: { bg: "Кампари", en: "Campari" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
         { name: { bg: "Перно", en: "Pernod" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
         { name: { bg: "Узо 12", en: "Ouzo 12" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.00 },
-        { name: { bg: "Абсент 55%", en: "Absinthe" }, desc: { bg: "", en: "" }, size: "50мл", price: 4.50 },
+        { name: { bg: "Абсент 55", en: "Absinthe 55" }, desc: { bg: "", en: "" }, size: "50мл", price: 4.50 },
         { name: { bg: "Аперол", en: "Aperol" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
         { name: { bg: "Бургас 63", en: "Burgas 63" }, desc: { bg: "Ракия", en: "Rakia" }, size: "50мл", price: 3.00 },
         { name: { bg: "Мента Пещера", en: "Peshtera Mint"    }, desc: { bg: "Български Ментов Ликьор",    en: "Bulgarian Mint Liqueur"    }, size: "50мл", price: 3.00 },
@@ -3065,7 +3064,10 @@ const CATEGORIES = [
       { name: { bg: "Ликьор Кокос",  en: "Coconut Liqueur"    }, desc: { bg: "Кокосов ликьор", en: "Coconut liqueur"   }, size: "50мл", price: 3.50 },
       { name: { bg: "Ликьор Ягода",  en: "Strawberry Liqueur" }, desc: { bg: "Ягодов ликьор", en: "Strawberry liqueur"}, size: "50мл", price: 3.50 },
       { name: { bg: "Трипъл Сек",   en: "Triple Sec"          }, desc: { bg: "Портокалов ликьор", en: "Orange liqueur"        }, size: "50мл", price: 3.50 },
-      { name: { bg: "Мента Бранка",  en: "Branca Mint"        }, desc: { bg: "Ментов ликьор", en: "Mint liqueur"       }, size: "50мл", price: 4.00 },
+        { name: { bg: "Мента Бранка", en: "Branca Mint" }, desc: { bg: "Ментов ликьор", en: "Mint liqueur" }, size: "50мл", price: 4.00 },
+        { badge: "new", name: { bg: "Лимончело", en: "Limoncello" }, desc: { bg: "Лимонов ликьор", en: "Lemon liqueur" }, size: "50мл", price: 4.00 },
+        { badge: "new", name: { bg: "Ликьор Личи", en: "Lychee liqueur" }, desc: { bg: "Личи ликьор", en: "Lychee liqueur" }, size: "50мл", price: 4.00 },
+
     ]
   },
   {
@@ -3745,21 +3747,66 @@ renderMenu();
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
     { bg: "Зелен Хлад",        en: "Green Chill",             lose: false },
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
-    { bg: "Ягодов Облак",      en: "Strawberry Cloud",        lose: false },
+    { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz",        lose: false },
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
     { bg: "Секс с Мръсницата", en: "Sex with the Dirty One",  lose: false },
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
     { bg: "Секс на Плажа",     en: "Sex on the Beach",        lose: false },
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
-    { bg: "Отворени Бедра",    en: "Slippery Thighs",         lose: false },
-    { bg: "Опитай пак",        en: "Try Again",               lose: true  },
     { bg: "Оргазъм",           en: "Orgasm",                  lose: false },
     { bg: "Опитай пак",        en: "Try Again",               lose: true  },
-    { bg: "Бял Руснак",        en: "White Russian",           lose: false },
-    { bg: "Опитай пак",        en: "Try Again",               lose: true  },
+  
   ];
-  var COCKTAIL_DESC_BG = {"Текила Сънрайз": "текила, фреш портокал, гренадин", "Блъди Мери": "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон", "Мохито": "ром, мента, лайм, сироп кафява захар, сода", "Дайкири": "ром, захарен сироп, лайм", "Лонг Айланд": "джин, водка, ром, текила, кола, лайм, коантро", "Синя Лагуна": "водка, синьо кюрасо, лайм, спрайт", "Пина Колада": "ром, ананас, ликьор кокос, лайм", "Бял Руснак": "водка, калуа, мляко, сметана, индийски орех", "Палома": "текила, лимонада грейпфрут, лайм, Tajín", "Маргарита": "текила, коантро, лайм, сол", "Куба Либре": "тъмен ром, кола, лайм", "Аперол Шприц": "просеко, аперол, портокал, сода", "Кадифена Праскова": "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко", "Зелен Хлад": "джин, лайм, краставица, мента, захарен сироп с розмарин, тоник", "Ягодов Облак": "ягодов ликьор, свежи ягоди, водка, лайм, сироп ягода, захарен памук", "Секс с Мръсницата": "водка, ликьор пъпеш, гренадин, сок ананас, лайм", "Секс на Плажа": "водка, сок ананас, сок праскова, гренадин, ликьор праскова", "Отворени Бедра": "водка, сок ананас, сок вишна, лайм, гренадин", "Оргазъм": "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана", "Ягодов Оргазъм": "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана", "Тропически Кик": "ром, сок манго, сок ананас, гренадин, лайм", "Тропическо Мангово Маце": "пюре от манго, банан, мляко, мед, лайм, сметана", "Пинк Бери Тоник": "ягоди, малини, лимон, лайм, розов тоник, гренадин", "Еспресо Мохито": "мента, лайм, спрайт, еспресо"};
-  var COCKTAIL_DESC_EN = {"Tequila Sunrise": "tequila, fresh orange, grenadine", "Bloody Mary": "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon", "Mojito": "rum, mint, lime, brown sugar syrup, soda", "Daiquiri": "rum, sugar syrup, lime", "Long Island": "gin, vodka, rum, tequila, cola, lime, cointreau", "Blue Lagoon": "vodka, blue curaçao, lime, sprite", "Piña Colada": "rum, pineapple, coconut liqueur, lime", "White Russian": "vodka, kahlua, milk, cream, nutmeg", "Paloma": "tequila, grapefruit lemonade, lime, Tajín", "Margarita": "tequila, cointreau, lime, salt", "Cuba Libre": "dark rum, cola, lime", "Aperol Spritz": "prosecco, aperol, orange, soda", "Velvet Peach": "fresh peach, peach purée, licor 43, lime, prosecco", "Green Chill": "gin, lime, cucumber, mint, rosemary syrup, tonic", "Strawberry Cloud": "strawberry liqueur, fresh strawberries, vodka, lime, strawberry syrup, cotton candy", "Sex with the Dirty": "vodka, melon liqueur, grenadine, pineapple juice, lime", "Sex on the Beach": "vodka, pineapple juice, peach juice, grenadine, peach liqueur", "Open Thighs": "vodka, pineapple juice, cherry juice, lime, grenadine", "Orgasm": "baileys, kahlúa, ice cream, banana, malibu, vodka, milk, cream", "Strawberry Orgasm": "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, dash of lime, cream", "Tropical Kick": "rum, mango juice, pineapple juice, grenadine, lime", "Tropical Mango Babe": "mango purée, banana, milk, honey, lime, cream", "Pink Berry Tonic": "strawberries, raspberries, lemon, lime, pink tonic, grenadine", "Espresso Mojito": "mint, lime, sprite, espresso"};
+    var COCKTAIL_DESC_BG = {
+        "Текила Сънрайз": "текила, фреш портокал, гренадин",
+        "Блъди Мери": "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон",
+        "Мохито": "ром, мента, лайм, сироп кафява захар, сода",
+        "Дайкири": "ром, захарен сироп, лайм",
+        "Лонг Айланд": "джин, водка, ром, текила, кола, лайм, коантро",
+        "Синя Лагуна": "водка, синьо кюрасо, лайм, спрайт",
+        "Пина Колада": "ром, ананас, ликьор кокос, лайм",
+        "Палома": "текила, лимонада грейпфрут, лайм, Tajín",
+        "Маргарита": "текила, коантро, лайм, сол",
+        "Куба Либре": "тъмен ром, кола, лайм",
+        "Аперол Шприц": "просеко, аперол, портокал, сода",
+        "Кадифена Праскова": "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко",
+        "Зелен Хлад": "джин, лайм, краставица, мента, захарен сироп с розмарин, тоник",
+        "Лимончело Личи Шприц": "лимончело, ликьор личи, просеко, сода",
+        "Секс с Мръсницата": "водка, ликьор пъпеш, гренадин, сок ананас, лайм",
+        "Секс на Плажа": "водка, сок ананас, сок праскова, гренадин, ликьор праскова",
+        "Оргазъм": "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана",
+        "Ягодов Оргазъм": "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана",
+        "Тропически Кик": "ром, сок манго, сок ананас, гренадин, лайм",
+        "Тропическо Мангово Маце": "пюре от манго, банан, мляко, мед, лайм, сметана",
+        "Пинк Бери Тоник": "ягоди, малини, лимон, лайм, розов тоник, гренадин",
+        "Еспресо Мохито": "мента, лайм, спрайт, еспресо"
+    };
+    var COCKTAIL_DESC_EN = {
+        "Tequila Sunrise": "tequila, fresh orange, grenadine",
+        "Bloody Mary": "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon",
+        "Mojito": "rum, mint, lime, brown sugar syrup, soda",
+        "Daiquiri": "rum, sugar syrup, lime",
+        "Long Island": "gin, vodka, rum, tequila, cola, lime, cointreau",
+        "Blue Lagoon": "vodka, blue curaçao, lime, sprite",
+        "Piña Colada": "rum, pineapple, coconut liqueur, lime",
+        "White Russian": "vodka, kahlua, milk, cream, nutmeg",
+        "Paloma": "tequila, grapefruit lemonade, lime, Tajín",
+        "Margarita": "tequila, cointreau, lime, salt",
+        "Cuba Libre": "dark rum, cola, lime",
+        "Aperol Spritz": "prosecco, aperol, orange, soda",
+        "Velvet Peach": "fresh peach, peach purée, licor 43, lime, prosecco",
+        "Green Chill": "gin, lime, cucumber, mint, rosemary syrup, tonic",
+        "Limoncello Lychee Spritz": "limoncello, lychee liqueur, prosecco, soda",
+        "Sex with the Dirty": "vodka, melon liqueur, grenadine, pineapple juice, lime",
+        "Sex on the Beach": "vodka, pineapple juice, peach juice, grenadine, peach liqueur",
+        "Open Thighs": "vodka, pineapple juice, cherry juice, lime, grenadine",
+        "Orgasm": "baileys, kahlúa, ice cream, banana, malibu, vodka, milk, cream",
+        "Strawberry Orgasm": "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, dash of lime, cream",
+        "Tropical Kick": "rum, mango juice, pineapple juice, grenadine, lime",
+        "Tropical Mango Babe": "mango purée, banana, milk, honey, lime, cream",
+        "Pink Berry Tonic": "strawberries, raspberries, lemon, lime, pink tonic, grenadine",
+        "Espresso Mojito": "mint, lime, sprite, espresso"
+    };
 var COLORS = [
     "#1a1410","#2a1f0e","#1a1410","#2a1f0e","#1a1410",
     "#2a1f0e","#1a1410","#2a1f0e","#1a1410","#2a1f0e",
@@ -4514,17 +4561,15 @@ var SURPRISE_ALC = [
   {bg:"Лонг Айланд",en:"Long Island",badge:null,taste:"both",desc:{bg:"джин, водка, ром, текила, кола, лайм, коантро | 250мл | 7.00€ / 13.69лв",en:"gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 7.00€ / 13.69 BGN"}},
   {bg:"Синя Лагуна",en:"Blue Lagoon",badge:"hot",taste:"sweet",desc:{bg:"водка, синьо кюрасо, лайм, спрайт | 250мл | 5.50€ / 10.76лв",en:"vodka, blue curacao, lime, sprite | 250ml | 5.50€ / 10.76 BGN"}},
   {bg:"Пина Колада",en:"Pina Colada",badge:null,taste:"sweet",desc:{bg:"ром, ананас, ликьор кокос, лайм | 250мл | 5.50€ / 10.76лв",en:"rum, pineapple, coconut liqueur, lime | 250ml | 5.50€ / 10.76 BGN"}},
-  {bg:"Бял Руснак",en:"White Russian",badge:null,taste:"creamy",desc:{bg:"водка, калуа, мляко, сметана, индийски орех | 160мл | 5.50€ / 10.76лв",en:"vodka, kahlua, milk, cream, nutmeg | 160ml | 5.50€ / 10.76 BGN"}},
   {bg:"Палома",en:"Paloma",badge:"new",taste:"fresh",desc:{bg:"текила, лимонада грейпфрут, лайм, Tajín | 250мл | 7.00€ / 13.69лв",en:"tequila, grapefruit lemonade, lime, Tajín | 250ml | 7.00€ / 13.69 BGN"}},
   {bg:"Маргарита",en:"Margarita",badge:"hot",taste:"fresh",desc:{bg:"текила, коантро, лайм, сол | 180мл | 5.50€ / 10.76лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна",en:"tequila, cointreau, lime, salt | 180ml | 5.50€ / 10.76BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy"}},
   {bg:"Куба Либре",en:"Cuba Libre",badge:null,taste:"both",desc:{bg:"тъмен ром, кола, лайм | 250мл | 5.00€ / 9.78лв",en:"dark rum, cola, lime | 250ml | 5.00€ / 9.78 BGN"}},
   {bg:"Аперол Шприц",en:"Aperol Spritz",badge:"hot",taste:"both",desc:{bg:"просеко, аперол, портокал, сода | 250мл | 5.00€ / 9.78лв",en:"prosecco, aperol, orange, soda | 250ml | 5.00€ / 9.78 BGN"}},
   {bg:"Зелен Хлад",en:"Green Chill",badge:null,taste:"fresh",desc:{bg:"джин, лайм, краставица, мента, захарен сироп с розмарин, тоник | 180мл | 7.00€ / 13.69лв",en:"gin, lime, cucumber, mint, rosemary syrup, tonic | 180ml | 7.00€ / 13.69 BGN"}},
   {bg:"Кадифена Праскова",en:"Velvet Peach",badge:"hot",taste:"both",desc:{bg:"свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 7.50€ / 14.67лв",en:"fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 7.50€ / 14.67 BGN"}},
-  {bg:"Ягодов Облак",en:"Strawberry Cloud",badge:null,taste:"sweet",desc:{bg:"ягодов ликьор, свежи ягоди, водка, лайм, сироп ягода, захарен памук | 180мл | 7.00€ / 13.69лв",en:"strawberry liqueur, fresh strawberries, vodka, lime, syrup, cotton candy | 180ml | 7.00€ / 13.69 BGN"}},
+    { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, сода | 250мл | 7.00€ / 13.69лв", en:"limoncello, lychee liqueur, prosecco, soda | 180ml | 7.00€ / 13.69 BGN"}},
   {bg:"Секс с Мръсницата",en:"Sex with the Dirty One",badge:"hot",taste:"sweet",desc:{bg:"водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 6.00€ / 11.73лв",en:"vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 6.00€ / 11.73 BGN"}},
-  {bg:"Секс на Плажа",en:"Sex on the Beach",badge:"hot",taste:"sweet",desc:{bg:"водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 6.00€ / 11.73лв",en:"vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 6.00€ / 11.73 BGN"}},
-  {bg:"Отворени Бедра",en:"Slippery Thighs",badge:null,taste:"both",desc:{bg:"водка, сок ананас, сок вишна, лайм, гренадин | 180мл | 6.00€ / 11.73лв",en:"vodka, pineapple juice, cherry juice, lime, grenadine | 180ml | 6.00€ / 11.73 BGN"}},
+  {bg:"Секс на Плажа",en:"Sex on the Beach",badge:"hot",taste:"sweet",desc:{bg:"водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 6.00€ / 11.73лв",en:"vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 6.00€ / 11.73 BGN"}}
   {bg:"Оргазъм",en:"Orgasm",badge:null,taste:"creamy",desc:{bg:"бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 6.50€ / 12.71лв",en:"baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 6.50€ / 12.71 BGN"}}
 ];
 var SURPRISE_NON = [
