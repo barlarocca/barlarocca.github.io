@@ -2,6 +2,8 @@
 <html lang="bg">
 <head>
 <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <meta name="color-scheme" content="only light">
   <meta name="supported-color-schemes" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -608,7 +610,70 @@ footer .footer-brand {
   flex-shrink: 0;
   opacity: .92;
 }
+    /* ─── Size Text Design ─── */
+    .var-pills-wrap {
+        display: block;
+        margin-top: 0.2rem;
+        /* 👉 разстояние от името до pills
+     🔧 0.1rem = по-компактно
+     🔧 0.3rem = по-въздушно */
+    }
+    .prod-name {
+        font-size: 1.33rem;
+        text-shadow: 0 0 6px rgba(201,169,110,0.9), 0 0 14px rgba(201,169,110,0.65), 0 0 28px rgba(201,169,110,0.4), 0 0 50px rgba(201,169,110,0.2), 0 1px 4px rgba(0,0,0,0.7);
+    }
+    .prod-size {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.0rem;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        opacity: 0.95;
+        margin-top: 0.3rem;
+        font-family: 'Cormorant Garamond', serif;
+    }
 
+        .prod-size::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 6px;
+            background: #ffd27a;
+            box-shadow: 0 0 4px rgba(255, 210, 122, 0.5);
+            flex-shrink: 0;
+        }
+    .prod-desc-line {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+        margin-top: 0.3rem;
+    }
+    .prod-desc-text {
+        font-weight: 350;
+        /* 👉 по-леко от стандартното 400 → по-елегантно */
+
+        font-size: 0.8rem;
+        /* 👉 комфортна четимост без да доминира */
+
+        line-height: 1.55;
+        /* 👉 “air” между редовете = luxury feel */
+        font-style: italic;
+        letter-spacing: 0.02em;
+        /* 👉 леко разтворени букви → premium typography */
+
+        color: rgba(255,244,220,0.95);
+        /* 👉 топло off-white (не чисто бяло → по-скъпо изглежда) */
+
+        opacity: 0.95;
+        /* 👉 леко soft, но still readable */
+
+        font-family: 'Russo One', sans-serif;
+        /* 👉 ако имаш custom font → ще се активира */
+        text-shadow: 0 0 10px rgba(201,169,110,0.5);
+    }
 /* ─── BLOB FLOATING ANIMATIONS ─── */
 @keyframes floatA {
   0%   { transform: translateY(0px) scale(1); }
@@ -862,7 +927,7 @@ footer .footer-brand {
 }
 .var-pill-label {
   display: inline-block;
-  width: 2.8rem;
+  width: 3.0rem;
   text-align: center;
 }
 .var-pill::before {
@@ -873,6 +938,8 @@ footer .footer-brand {
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+/*ALL PILL VARIANTS */
 .var-pill-classic { background: rgba(255,255,255,0.08); color: rgba(240,225,200,0.95); border-color: rgba(240,225,200,0.3); }
 .var-pill-classic::before { background: #e8dfc8; box-shadow: 0 0 3px rgba(255,255,255,0.4); }
 .var-pill-pink    { background: rgba(220,100,140,0.15); color: rgba(255,160,190,0.97); border-color: rgba(220,100,140,0.45); }
@@ -908,9 +975,171 @@ footer .footer-brand {
 .var-pill-milkaHazelnut::before { background: linear-gradient(135deg, #2ecc71, #1e9e5a);box-shadow: 0 0 4px rgba(46, 204, 113, 0.6);}
 .var-pill-milkaClassic { background: rgba(140, 90, 200, 0.12);color: rgba(220, 190, 255, 0.95); border-color: rgba(140, 90, 200, 0.35); }
 .var-pill-milkaClassic::before {background: linear-gradient(135deg, #a855f7, #6d28d9); box-shadow: 0 0 4px rgba(168, 85, 247, 0.6);}
+.var-pill-classic1 { background: rgba(255,255,255,0.08); color: rgba(240,225,200,0.95);border-color: rgba(240,225,200,0.3); }
+    .var-pill-classic1::before {
+        content: none !important;
+        display: none !important;
+        width: 0 !important;
+    }
+    .var-pill-orangecit {
+        background: rgba(255,140,40,0.16);
+        color: rgba(255,190,120,0.98);
+        border-color: rgba(255,140,40,0.45);
+    }
+
+        .var-pill-orangecit::before {
+            content: none !important;
+        }
+    /*VARIANTTS WITH EMOJIS FOR COCKTAILS AND MOCKTAILS*/
+    .var-pill-mango {
+        background: rgba(255,200,0,0.15);
+        color: rgba(255,220,80,0.97);
+        border-color: rgba(255,200,0,0.45);
+    }
+
+        .var-pill-mango::before {
+            display: none;
+        }
+
+    .var-pill-strawberry {
+        background: rgba(200,40,40,0.15);
+        color: rgba(255,120,120,0.97);
+        border-color: rgba(200,40,40,0.45);
+    }
+
+        .var-pill-strawberry::before {
+            display: none;
+        }
+
+    .var-pill-raspberry {
+        background: rgba(150,40,180,0.15);
+        color: rgba(210,130,255,0.97);
+        border-color: rgba(150,40,180,0.45);
+    }
+
+        .var-pill-raspberry::before {
+            display: none;
+        }
+
+    .var-pill-spicy {
+        background: rgba(200,40,40,0.15);
+        color: rgba(255,120,100,0.97);
+        border-color: rgba(200,40,40,0.45);
+    }
+
+        .var-pill-spicy::before {
+            display: none;
+        }
+
+    .var-pill-lemon {
+        background: rgba(255,220,0,0.15);
+        color: rgba(255,235,100,0.97);
+        border-color: rgba(255,220,0,0.45);
+    }
+
+        .var-pill-lemon::before {
+            display: none;
+        }
+
+    .var-pill-grapefruit {
+        background: rgba(255,100,150,0.15);
+        color: rgba(255,160,190,0.97);
+        border-color: rgba(255,100,150,0.45);
+    }
+
+        .var-pill-grapefruit::before {
+            display: none;
+        }
+
+    .var-pill-peach {
+        background: rgba(255,140,60,0.15);
+        color: rgba(255,190,120,0.97);
+        border-color: rgba(255,140,60,0.45);
+    }
+
+        .var-pill-peach::before {
+            display: none;
+        }
+
+    .var-pill-banana {
+        background: rgba(255,220,0,0.15);
+        color: rgba(255,235,100,0.97);
+        border-color: rgba(255,220,0,0.45);
+    }
+
+        .var-pill-banana::before {
+            display: none;
+        }
+
+    .var-pill-cherry {
+        background: rgba(180,30,60,0.15);
+        color: rgba(255,100,120,0.97);
+        border-color: rgba(180,30,60,0.45);
+    }
+
+        .var-pill-cherry::before {
+            display: none;
+        }
+
+    .var-pill-cassis {
+        background: rgba(100,30,150,0.15);
+        color: rgba(180,120,255,0.97);
+        border-color: rgba(100,30,150,0.45);
+    }
+
+        .var-pill-cassis::before {
+            display: none;
+        }
+
+    .var-pill-apple {
+        background: rgba(180,50,50,0.15);
+        color: rgba(255,130,130,0.97);
+        border-color: rgba(180,50,50,0.45);
+    }
+
+        .var-pill-apple::before {
+            display: none;
+        }
+
+    .var-pill-chocolate {
+        background: rgba(100,60,20,0.25);
+        color: rgba(200,150,100,0.97);
+        border-color: rgba(150,90,40,0.45);
+    }
+
+        .var-pill-chocolate::before {
+            display: none;
+        }
+
+    .var-pill-pineapple {
+        background: rgba(255,200,0,0.15);
+        color: rgba(255,220,80,0.97);
+        border-color: rgba(255,200,0,0.45);
+    }
+
+        .var-pill-pineapple::before {
+            display: none;
+        }
+
+    .var-pill-tomato {
+        background: rgba(180,40,40,0.15);
+        color: rgba(255,120,100,0.97);
+        border-color: rgba(180,40,40,0.45);
+    }
+
+        .var-pill-tomato::before {
+            display: none;
+        }
 @media(max-width:768px) {
   .var-pill { font-size: .4rem; padding: .12rem .35rem; }
 }
+    .var-pill-label {
+        width: 3.2rem;
+    }
+
+    .var-pill-label-en {
+        width: 3.8rem;
+    }
  .prod-desc {
         white-space: pre-line;
     }
@@ -2672,14 +2901,14 @@ const CATEGORIES = [
     items: [
       { name: { bg: "Текила Сънрайз", en: "Tequila Sunrise" },    desc: { bg: "текила, фреш портокал, гренадин",              en: "tequila, fresh orange, grenadine"              }, size: "250мл", price: 5.50 , taste: "sweet" },
       { name: { bg: "Блъди Мери", en: "Bloody Mary" },        desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon" }, size: "250мл", price: 5.50 , taste: "spicy" },
-      { name: { bg: "Мохито", en: "Mojito" },            desc: { bg: "ром, мента, лайм, сироп кафява захар, сода",   en: "rum, mint, lime, brown sugar syrup, soda"       }, size: "250мл", price: 5.50, note: { bg: "✦ Варианти: \n· \uD83C\uDF79 Класик\n· \uD83E\uDD6D Манго\n· \uD83C\uDF53 Ягода\n· \uD83E\uDED0 Малина", en: "✦ Variants: \n· \uD83C\uDF79 Classic\n· \uD83E\uDD6D Mango\n· \uD83C\uDF53 Strawberry\n· \uD83E\uDED0 Raspberry" } , taste: "both" },
-      { badge: true, name: { bg: "Дайкири", en: "Daiquiri" },           desc: { bg: "ром, захарен сироп, лайм",                     en: "rum, sugar syrup, lime"                         }, size: "180мл", price: 5.00, note: { bg: "✦ Варианти: \n· \uD83C\uDF79 Класик\n· \uD83E\uDD6D Манго\n· \uD83C\uDF53 Ягода\n· \uD83E\uDED0 Малина", en: "✦ Variants: \n· \uD83C\uDF79 Classic\n· \uD83E\uDD6D Mango\n· \uD83C\uDF53 Strawberry\n· \uD83E\uDED0 Raspberry" } , taste: "fresh" },
+        { name: { bg: "Мохито", en: "Mojito" }, desc: { bg: "ром, мента, лайм, сироп кафява захар, сода", en: "rum, mint, lime, brown sugar syrup, soda" }, variants: ['classic1', 'mango', 'strawberry', 'raspberry'], size: "250мл", price: 5.50, note: { bg: "", en: "" } , taste: "both" },
+        { badge: true, name: { bg: "Дайкири", en: "Daiquiri" }, desc: { bg: "ром, захарен сироп, лайм", en: "rum, sugar syrup, lime" }, variants: ['classic1', 'mango', 'strawberry', 'raspberry'], size: "180мл", price: 5.00, note: { bg: "", en: "" } , taste: "fresh" },
       { name: { bg: "Лонг Айланд", en: "Long Island" },       desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро",en: "gin, vodka, rum, tequila, cola, lime, cointreau" }, size: "250мл", price: 7.00 , taste: "both" },
       { badge: true, name: { bg: "Синя Лагуна", en: "Blue Lagoon" },       desc: { bg: "водка, синьо кюрасо, лайм, спрайт",            en: "vodka, blue curacao, lime, sprite"               }, size: "250мл", price: 5.50 , taste: "sweet" },
       { name: { bg: "Пина Колада", en: "Piña Colada" },       desc: { bg: "ром, ананас, ликьор кокос, лайм",              en: "rum, pineapple, coconut liqueur, lime"           }, size: "250мл", price: 5.50 , taste: "sweet" },
       { name: { bg: "Бял Руснак", en: "White Russian" },        desc: { bg: "водка, калуа, мляко, сметана, индийски орех",  en: "vodka, kahlúa, milk, cream, coconut"             }, size: "160мл", price: 5.50 , taste: "creamy" },
             { badge: "new", name: { bg: "Палома", en: "Paloma" }, desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín", en: "tequila, grapefruit lemonade, lime, Tajín" }, size: "250мл", price: 7.00 , taste: "fresh" },
-      { badge: true, name: { bg: "Маргарита", en: "Margarita" },         desc: { bg: "текила, коантро, лайм, сол",    en: "tequila, cointreau, lime, salt"    }, size: "180мл", price: 5.50, note: { bg: "✦ Варианти: \n· \uD83C\uDF79 Класик\n· \uD83C\uDF36\uFE0F Пикантна", en: "✦ Variants: \n· \uD83C\uDF79 Classic\n· \uD83C\uDF36\uFE0F Spicy" }, taste: "fresh" },
+      { badge: true, name: { bg: "Маргарита", en: "Margarita" },         desc: { bg: "текила, коантро, лайм, сол",    en: "tequila, cointreau, lime, salt"    },variants: ['classic1','spicy'], size: "180мл", price: 5.50, note: { bg: "", en: "" }, taste: "fresh" },
       { name: { bg: "Куба Либре", en: "Cuba Libre" },        desc: { bg: "тъмен ром, кола, лайм",                        en: "dark rum, cola, lime"                           }, size: "250мл", price: 5.00 , taste: "both" },
       { badge: true, name: { bg: "Аперол Шприц", en: "Aperol Spritz" },      desc: { bg: "просеко, аперол, портокал, сода",              en: "prosecco, aperol, orange, soda"                 }, size: "250мл", price: 5.00 , taste: "both" },
     ]
@@ -2687,7 +2916,7 @@ const CATEGORIES = [
   {
     id: "non", label: { bg: "Безалкохолни коктейли", en: "Non-Alc Cocktails" },
     items: [
-      { badge: true, name: { bg: "Ягодов Оргазъм", en: "Strawberry Orgasm" },      desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, dash of lime, cream" }, size: "250мл", price: 4.50 , taste: "creamy" },
+      { badge: true, name: { bg: "Ягодов Оргазъм", en: "Strawberry Orgasm" },      desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди,\n кокосови стърготини, щипка лайм, сметана", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, dash of lime, cream" }, size: "250мл", price: 4.50 , taste: "creamy" },
       { badge: "new", name: { bg: "Тропическо Мангово Маце", en: "Tropical Mango Babe" }, desc: { bg: "пюре от манго, банан, мляко, мед, лайм, сметана", en: "mango purée, banana, milk, honey, lime, cream" }, size: "250мл", price: 5.00 , taste: "creamy" },
       { badge: "new", name: { bg: "Пинк Бери Тоник", en: "Pink Berry Tonic" }, desc: { bg: "ягоди, малини, лимон, лайм, розов тоник, гренадин", en: "strawberries, raspberries, lemon, lime, pink tonic, grenadine" }, size: "250мл", price: 5.50 , taste: "fresh" },
       { badge: "new", name: { bg: "Еспресо Мохито", en: "Espresso Mojito" }, desc: { bg: "мента, лайм, спрайт, еспресо", en: "mint, lime, sprite, espresso" }, size: "250мл", price: 5.50 , taste: "both" },
@@ -2817,10 +3046,10 @@ const CATEGORIES = [
         { name: { bg: "Кампари", en: "Campari" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
         { name: { bg: "Перно", en: "Pernod" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
         { name: { bg: "Узо 12", en: "Ouzo 12" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.00 },
-        { name: { bg: "Абсент", en: "Absinthe" }, desc: { bg: "", en: "" }, size: "50мл", price: 4.50 },
+        { name: { bg: "Абсент 55%", en: "Absinthe" }, desc: { bg: "", en: "" }, size: "50мл", price: 4.50 },
         { name: { bg: "Аперол", en: "Aperol" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.50 },
-        { name: { bg: "Бургас 63", en: "Burgas 63" }, desc: { bg: "", en: "" }, size: "50мл", price: 3.00 },
-        { name: { bg: "Мента Пещера", en: "Peshtera Mint"    }, desc: { bg: "Bulgarian Mint Liqueur",    en: "Bulgarian Mint Liqueur"    }, size: "50мл", price: 3.00 },
+        { name: { bg: "Бургас 63", en: "Burgas 63" }, desc: { bg: "Ракия", en: "Rakia" }, size: "50мл", price: 3.00 },
+        { name: { bg: "Мента Пещера", en: "Peshtera Mint"    }, desc: { bg: "Български Ментов Ликьор",    en: "Bulgarian Mint Liqueur"    }, size: "50мл", price: 3.00 },
     ]
   },
   {
@@ -2868,37 +3097,39 @@ const CATEGORIES = [
     id: "soft", label: { bg: "Безалкохолни напитки", en: "Soft Drinks" },
     groups: [
       { heading: { bg: "Газирани напитки", en: "Sodas & Colas" }, items: [
-        { name: { bg: "Сода Кинли",           en: "Kinley Soda"    }, desc: { bg: "Soda Kinley",    en: "Kinley Soda"    }, size: "250мл", price: 2.00 },
-        { name: { bg: "Кока Кола",            en: "Coca-Cola"      }, desc: { bg: "Coca-Cola",      en: "Coca-Cola"      }, size: "250мл", price: 2.00 },
-        { name: { bg: "Кока Кола Зеро",       en: "Coca-Cola Zero" }, desc: { bg: "Coca-Cola Zero", en: "Coca-Cola Zero" }, size: "250мл", price: 2.00 },
-        { name: { bg: "Фанта Лимон",          en: "Fanta Lemon"    }, desc: { bg: "Fanta Lemon",    en: "Fanta Lemon"    }, size: "250мл", price: 2.00 },
-        { name: { bg: "Фанта Портокал",       en: "Fanta Orange"   }, desc: { bg: "Fanta Orange",   en: "Fanta Orange"   }, size: "250мл", price: 2.00 },
-        { name: { bg: "Боржоми",              en: "Borjomi"        }, desc: { bg: "Borjomi",        en: "Borjomi"        }, size: "330мл", price: 2.50 },
-        { name: { bg: "Перие",               en: "Perrier"        }, desc: { bg: "Perrier",        en: "Perrier"        }, size: "330мл", price: 3.00 },
-        { name: { bg: "Минерална вода Девин", en: "Devin Mineral Water" }, desc: { bg: "Devin Water", en: "Devin Water" }, size: "500мл", price: 1.50 },
-        { name: { bg: "Red Bull",             en: "Red Bull"       }, desc: { bg: "Red Bull",       en: "Red Bull"       }, size: "250мл", price: 3.50 },
-        { name: { bg: "Тоник", en: "Tonic" }, desc: { bg: "Класик · Розов", en: "Classic · Pink" }, size: "250мл", price: 2.50 },
+        { name: { bg: "Сода Кинли",           en: "Kinley Soda"    }, desc: { bg: "",    en: ""    }, size: "250мл", price: 2.00 },
+        { name: { bg: "Кока Кола",            en: "Coca-Cola"      }, desc: { bg: "",      en: ""      }, size: "250мл", price: 2.00 },
+        { name: { bg: "Кока Кола Зеро",       en: "Coca-Cola Zero" }, desc: { bg: "", en: "" }, size: "250мл", price: 2.00 },
+        { name: { bg: "Фанта Лимон",          en: "Fanta Lemon"    }, desc: { bg: "",    en: ""    }, size: "250мл", price: 2.00 },
+        { name: { bg: "Фанта Портокал",       en: "Fanta Orange"   }, desc: { bg: "",   en: ""   }, size: "250мл", price: 2.00 },
+          { name: { bg: "Боржоми", en: "Borjomi" }, desc: { bg: "Минерална вода от Грузия, богата на соли и минерали", en: "Mineral water from Georgia, rich in salts and minerals"        }, size: "330мл", price: 2.50 },
+          { name: { bg: "Перие", en: "Perrier" }, desc: { bg: "Естествено газирана изворна вода от Южна Франция", en: "Naturally sparkling spring water from Southern France"        }, size: "330мл", price: 3.00 },
+        { name: { bg: "Минерална вода Девин", en: "Devin Mineral Water" }, desc: { bg: "", en: "" }, size: "500мл", price: 1.50 },
+        { name: { bg: "Red Bull",             en: "Red Bull"       }, desc: { bg: "",       en: ""       }, size: "250мл", price: 3.50 },
+          { name: { bg: "Тоник Швепс", en: "Tonic Schweppes" }, desc: { bg: "", en: "" }, variants: ["classic", "pink"], size: "250мл", price: 2.50 },
+          { name: { bg: "Thomas Henry", en: "Thomas Henry" }, desc: { bg: "", en: "" }, variants: ["grapefruit"], size: "200мл", price: 2.50 },
       ]},
       { heading: { bg: "Кафе · Чай · Шоколад", en: "Coffee · Tea · Chocolate" }, items: [
-        { name: { bg: "Кафе Еспресо",   en: "Espresso"       }, desc: { bg: "Spetema",        en: "Spetema"        }, logoClass: "espresso-logo", size: "30мл", price: 2.50, logo: "data:image/png;base64,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" },
+        { name: { bg: "Кафе Еспресо",   en: "Espresso"       }, desc: { bg: "",        en: ""        }, logoClass: "espresso-logo", size: "30мл", price: 2.50, logo: "data:image/png;base64,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" },
         { name: { bg: "Бяло Фрапе", en: "White Frappe" }, desc: { bg: "мляко, Nescafé", en: "milk, Nescafé" }, note: { bg: "✦ по желание: подсладено", en: "✦ optional: sweetened" }, size: "250мл", price: 3.00 },
         { name: { bg: "Горещ Шоколад",  en: "Hot Chocolate"  }, desc: { bg: "мляко, шоколад, сметана", en: "milk, chocolate, cream" }, size: "250мл", price: 3.00 },
         { name: { bg: "Студен Шоколад", en: "Cold Chocolate" }, desc: { bg: "мляко, шоколад, сметана", en: "milk, chocolate, cream" }, size: "250мл", price: 3.00 },
-        { name: { bg: "Билков Чай",     en: "Herbal Tea"     }, desc: { bg: "Билков чай", en: "Herbal Tea" }, note: { bg: "✦ по желание: мед · лимон · джинджифил · ментови листа", en: "✦ optional add-ons: honey · lemon · ginger · mint leaves" }, size: "250мл", price: 2.50 },
+        { name: { bg: "Билков Чай",     en: "Herbal Tea"     }, desc: { bg: "", en: "" }, note: { bg: "✦ по желание: мед · лимон · джинджифил · ментови листа", en: "✦ optional add-ons: honey · lemon · ginger · mint leaves" }, size: "250мл", price: 2.50 },
       ]},
       { heading: { bg: "Лимонади", en: "Lemonades" }, items: [
         { name: { bg: "Лимонада", en: "Lemonade" }, desc: { bg: "плодов сироп, мента, лимон, сода", en: "fruit syrup, mint, lemon, soda" }, size: "300мл", price: 3.50, note: { bg: "✦ Попитайте нашия сервитьор за наличните вкусове", en: "✦ Ask your waiter for available flavours" } },
       ]},
-      { heading: { bg: "Цитронади / Безалкохолна Мента", en: "Citrusnade / Non-Alc Mint" }, items: [
-        { name: { bg: "Цитронада", en: "Citrusnade" }, desc: { bg: "цитруси, сода, мента, захарен сироп", en: "citrus, soda, mint, sugar syrup" }, size: "300мл", price: 3.50, note: { bg: "✦ Варианти: \n· \uD83C\uDF4B Лимон\n· \uD83C\uDF4A Портокал\n· \uD83D\uDFE0 Грейпфрут", en: "✦ Variants: \n· \uD83C\uDF4B Lemon\n· \uD83C\uDF4A Orange\n· \uD83D\uDFE0 Grapefruit" } },
+        {
+            heading: { bg: "Цитронади / Безалкохолна Мента", en: "Citrusnade / Non-Alc Mint" }, items: [
+                { name: { bg: "Цитронада", en: "Citrusnade" }, desc: { bg: "цитруси, сода, мента, захарен сироп", en: "citrus, soda, mint, sugar syrup" }, variants:["lemon","orangecit","grapefruit"], size: "300мл", price: 3.50, note: { bg: "", en: "" } },
         { name: { bg: "Безалкохолна мента + Сода",   en: "Non-Alc Mint + Soda"   }, desc: { bg: "сироп мента, лимон, сода", en: "mint syrup, lemon, soda" }, size: "300мл", price: 3.00 },
         { name: { bg: "Безалкохолна мента + Спрайт", en: "Non-Alc Mint + Sprite" }, desc: { bg: "сироп мента, лимон, спрайт", en: "mint syrup, lemon, sprite" }, size: "300мл", price: 3.00 },
       ]},
       { heading: { bg: "Плодови шейкове", en: "Fruit Milkshakes" }, items: [
-        { name: { bg: "Плодов шейк", en: "Fruit Shake" }, desc: { bg: "мляко, сладолед, плод, сметана", en: "milk, ice cream, fruit, cream" }, size: "200мл", price: 4.00, note: { bg: "✦ Варианти: \n· \uD83C\uDF4C Банан\n· \uD83C\uDF6B Шоколад\n· \uD83C\uDF53 Ягода\n· \uD83C\uDF51 Праскова", en: "✦ Variants: \n· \uD83C\uDF4C Banana\n· \uD83C\uDF6B Chocolate\n· \uD83C\uDF53 Strawberry\n· \uD83C\uDF51 Peach" } },
+          { name: { bg: "Плодов шейк", en: "Fruit Shake" }, desc: { bg: "мляко, сладолед, плод, сметана", en: "milk, ice cream, fruit, cream" }, variants: ['banana', 'chocolate', 'strawberry', 'peach'], size: "200мл", price: 4.00, note: { bg: "", en: "" } },
       ]},
       { heading: { bg: "Натурални сокове", en: "Natural Juices" }, items: [
-        { name: { bg: "Натурален сок", en: "Natural Juice" }, desc: { bg: "натурален", en: "natural" }, size: "250мл", price: 2.50, note: { bg: "✦ Варианти: \n· \uD83C\uDF4D Ананас\n· \uD83C\uDF4A Портокал\n· \uD83C\uDF52 Вишна\n· \uD83E\uDED0 Касис\n· \uD83C\uDF51 Праскова\n· \uD83C\uDF4E Ябълка\n· \uD83C\uDF4C Банан\n· \uD83C\uDF45 Домат", en: "✦ Variants: \n· \uD83C\uDF4D Pineapple\n· \uD83C\uDF4A Orange\n· \uD83C\uDF52 Cherry\n· \uD83E\uDED0 Blackcurrant\n· \uD83C\uDF51 Peach\n· \uD83C\uDF4E Apple\n· \uD83C\uDF4C Banana\n· \uD83C\uDF45 Tomato" } },
+          { name: { bg: "Натурален сок", en: "Natural Juice" }, desc: { bg: "", en: "" }, variants: ['pineapple', 'orangecit', 'cherry', 'cassis', 'peach', 'apple', 'banana', 'tomato'], size: "250мл", price: 2.50, note: { bg: "", en: "" } },
       ]},
     ]
   }
@@ -3070,12 +3301,12 @@ function renderItem(item, lang) {
   
   var note = item.note ? '<span class="prod-note">' + item.note[lang] + '</span>' : "";
   var varPillLabels = {
-    classic:     { bg: 'Бял',     en: 'White'   },
+    classic:     { bg: 'Класик',     en: 'Classic'   },
     pink:        { bg: 'Розов',   en: 'Pink'    },
     black:       { bg: 'Черен',   en: 'Black'   },
     red:         { bg: 'Червен',  en: 'Red'     },
-    silver:      { bg: 'Сребро',  en: 'Silver'  },
-    gold:        { bg: 'Злато',   en: 'Gold'    },
+    silver:      { bg: 'Сребърна',  en: 'Silver'  },
+    gold:        { bg: 'Златна',   en: 'Gold'    },
     classic_abs: { bg: '\uD83C\uDF78 Класик',  en: '\uD83C\uDF78 Classic' },
     blue:        { bg: 'Син Етикет', en: 'Blue Label' },
     blue2:        { bg: 'Син', en: 'Blue' },
@@ -3087,15 +3318,65 @@ function renderItem(item, lang) {
       white: { bg: 'Бяло', en: 'White' },
       milkaClassic: { bg: 'Класик', en: 'Classic' },
       milkaHazelnut: { bg: 'Лешник', en: 'Hazelnut' },
+      mango: { bg: '\uD83E\uDD6D Манго', en: '\uD83E\uDD6D Mango' },
+      strawberry: { bg: '\uD83C\uDF53 Ягода', en: '\uD83C\uDF53 Strawberry' },
+      raspberry: { bg: '\uD83E\uDED0 Малина', en: '\uD83E\uDED0 Raspberry' },
+      spicy: { bg: '\uD83C\uDF36\uFE0F Пикантна', en: '\uD83C\uDF36\uFE0F Spicy' },
+      lemon: { bg: '\uD83C\uDF4B Лимон', en: '\uD83C\uDF4B Lemon' },
+      orangecit: { bg: '\uD83C\uDF4A Портокал', en: '\uD83C\uDF4A Orange' },
+      grapefruit: { bg: '\uD83D\uDFE0 Грейпфрут', en: '\uD83D\uDFE0 Grapefruit' },
+      pineapple: { bg: '\uD83C\uDF4D Ананас', en: '\uD83C\uDF4D Pineapple' },
+      cherry: { bg: '\uD83C\uDF52 Вишна', en: '\uD83C\uDF52 Cherry' },
+      cassis: { bg: '\uD83E\uDED0 Касис', en: '\uD83E\uDED0 Blackcurrant' },
+      peach: { bg: '\uD83C\uDF51 Праскова', en: '\uD83C\uDF51 Peach' },
+      apple: { bg: '\uD83C\uDF4E Ябълка', en: '\uD83C\uDF4E Apple' },
+      banana: { bg: '\uD83C\uDF4C Банан', en: '\uD83C\uDF4C Banana' },
+      tomato: { bg: '\uD83C\uDF45 Домат', en: '\uD83C\uDF45 Tomato' },
+      chocolate: { bg: '\uD83C\uDF6B Шоколад', en: '\uD83C\uDF6B Chocolate' },
+      classic1: { bg: '\uD83C\uDF79 Класик', en: '\uD83C\uDF79 Classic' },
 
   };
-    var varPillClass = { classic: 'var-pill-classic', pink: 'var-pill-pink', black: 'var-pill-black', red: 'var-pill-red', silver: 'var-pill-silver', gold: 'var-pill-gold', classic_abs: 'var-pill-neutral', vanilla: 'var-pill-neutral', blue: 'var-pill-blue', blue2: 'var-pill-blue2', orange: 'var-pill-orange', bianco: 'var-pill-bianco', extradry: 'var-pill-extradry', rose: 'var-pill-rose', white: 'var-pill-white', milkaHazelnut: 'var-pill-milkaHazelnut', milkaClassic: 'var-pill-milkaClassic' };
+    var varPillClass = {
+        classic: 'var-pill-classic',
+        pink: 'var-pill-pink',
+        black: 'var-pill-black',
+        red: 'var-pill-red',
+        silver: 'var-pill-silver',
+        gold: 'var-pill-gold',
+        classic_abs: 'var-pill-neutral',
+        vanilla: 'var-pill-neutral',
+        blue: 'var-pill-blue',
+        blue2: 'var-pill-blue2',
+        orange: 'var-pill-orange',
+        bianco: 'var-pill-bianco',
+        extradry: 'var-pill-extradry',
+        rose: 'var-pill-rose',
+        white: 'var-pill-white',
+        milkaHazelnut: 'var-pill-milkaHazelnut',
+        milkaClassic: 'var-pill-milkaClassic',
+        mango: 'var-pill-mango',
+        strawberry: 'var-pill-strawberry',
+        raspberry: 'var-pill-raspberry',
+        spicy: 'var-pill-spicy',
+        lemon: 'var-pill-lemon',
+        orangecit: 'var-pill-orangecit',
+        grapefruit: 'var-pill-grapefruit',
+        pineapple: 'var-pill-pineapple',
+        cherry: 'var-pill-cherry',
+        cassis: 'var-pill-cassis',
+        peach: 'var-pill-peach',
+        apple: 'var-pill-apple',
+        banana: 'var-pill-banana',
+        tomato: 'var-pill-tomato',
+        chocolate: 'var-pill-chocolate',
+        classic1: 'var-pill-classic1',
+    };
   var varPills = '';
-  if (item.variants && item.variants.length) {
-    varPills = '<span class="var-pills">' +
-      item.variants.map(function(v) {
-        return '<span class="var-pill ' + (varPillClass[v] || '') + '"><span class="var-pill-label">' + ((varPillLabels[v] || {})[lang] || v) + '</span></span>';
-      }).join('') +
+    if (item.variants && item.variants.length) {
+        varPills = '<span class="var-pills">' +
+            item.variants.map(function (v) {
+                return '<span class="var-pill ' + (varPillClass[v] || '') + '"><span class="var-pill-label ' + (lang === 'en' ? 'var-pill-label-en' : '') + '">' + ((varPillLabels[v] || {})[lang] || v) + '</span></span>';
+            }).join('') +
     '</span>';
   }
   var logo = item.logoClass === 'whisky-logo-img' ? '<div style="display:flex;gap:.2rem;align-items:center;margin:.3rem 0 .1rem;justify-content:flex-start;"><img src="' + item.logo + '" class="prod-logo ' + item.logoClass + '" alt="">' + (item.logo2 ? '<img src="' + item.logo2 + '" class="prod-logo ' + item.logoClass + '" alt="">' : '') + '</div>' : item.logoClass ? '<img src="' + item.logo + '" class="prod-logo ' + item.logoClass + '" style="' + (item.logoClass === 'wines-logo' ? 'height:70px;width:auto;display:block;' : item.logoClass === 'choc-logo' ? 'height:25px;width:auto;display:block;' : '') + '" alt="">' : item.logo ? '<img src="' + item.logo + '" class="prod-logo" alt="">' : "";
@@ -3103,18 +3384,30 @@ function renderItem(item, lang) {
     var displaySize = (item.size != null && item.size !== '')
         ? String(item.size)
         : '';
-  return '<div class="prod-item">' +
-    '<div class="prod-info">' +
-      (item.logoClass === 'wines-logo' || item.logoClass === 'choc-logo' || item.logoClass === 'meze-logo' ? logo : '') +
-      (badge ? badge : '') +
-      '<span class="prod-name">' + displayName + '</span>' +
-      varPills +
-      (item.logoClass !== 'wines-logo' && item.logoClass !== 'choc-logo' && item.logoClass !== 'whisky-logo-img' && item.logoClass !== 'whisky-logo-black' && item.logoClass !== 'meze-logo' ? logo : '') + '<span class="prod-desc">' + ((item.desc && item.desc[lang]) ? item.desc[lang] + ' · ' : '') +
-      displaySize + '</span>' +
-      note +
-    '</div>' +
-      '<span class="prod-price">€' + item.price.toFixed(2) + '<br><span class="prod-bgn">' + (item.price * 1.95583).toFixed(2) + (lang === "en" ? " BGN" : " лв") + '</span></span>' +
-  '</div>';
+    return '<div class="prod-item">' +
+        '<div class="prod-info">' +
+        (item.logoClass === 'wines-logo' || item.logoClass === 'choc-logo' || item.logoClass === 'meze-logo' ? logo : '') +
+        (badge ? badge : '') +
+        '<span class="prod-name">' + displayName + '</span>' +
+        varPills +
+        (item.logoClass !== 'wines-logo' && item.logoClass !== 'choc-logo' && item.logoClass !== 'whisky-logo-img' && item.logoClass !== 'whisky-logo-black' && item.logoClass !== 'meze-logo' ? logo : '') +
+
+        '<div class="prod-desc-line">' +
+
+        (item.desc && item.desc[lang]
+            ? '<span class="prod-desc-text">' + item.desc[lang] + '</span>'
+            : '') +
+
+        (item.size
+            ? '<span class="prod-size">' + displaySize + '</span>'
+            : '') +
+
+        '</div>' +
+
+        note +
+        '</div>' +
+        '<span class="prod-price">€' + item.price.toFixed(2) + '<br><span class="prod-bgn">' + (item.price * 1.95583).toFixed(2) + (lang === "en" ? " BGN" : " лв") + '</span></span>' +
+        '</div>';
 }
 
 function renderGrid(items, lang) {
