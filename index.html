@@ -2,7 +2,8 @@
 <html lang="bg">
 <head>
 <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <meta name="color-scheme" content="only light">
   <meta name="supported-color-schemes" content="light">
@@ -89,8 +90,8 @@ nav.scrolled { background:rgba(8,8,8,.97); border-bottom:1px solid var(--border)
 .prod-item:nth-child(even) { padding-left:2.5rem; border-left:1px solid var(--border); }
 .prod-item:hover .prod-name { color:rgba(226,200,153,0.98); font-size:1.32rem; text-shadow:0 0 10px rgba(201,169,110,0.3); }
 .prod-info { flex:1; min-width:0; }
-.prod-name { font-family:var(--ff-display); font-size:1.08rem; font-weight:400; color:var(--cream); display:block; transition:color .3s; }
-.prod-desc { font-size:.8rem; color:rgba(240,225,200,1); text-shadow:0 0 10px rgba(240,225,195,0.3), 0 0 20px rgba(240,225,195,0.12); margin-top:.2rem; font-style:italic; line-height:1.5;  white-space:pre-line; }
+.prod-name { font-family:var(--ff-display); font-size:1.33rem; font-weight:400; color:rgba(226,200,153,0.98); text-shadow:0 1px 4px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.9); display:block; transition:color .3s; }
+.prod-desc { font-size:0.8rem; color:rgba(255,244,220,0.95); text-shadow:0 0 10px rgba(201,169,110,0.5); margin-top:0.3rem; font-style:italic; line-height:1.55; font-weight:350; letter-spacing:0.02em; opacity:0.95;  white-space:pre-line; }
 .prod-note { font-size:.62rem; color:rgba(201,169,110,0.92); text-shadow:0 0 8px rgba(201,169,110,0.35); letter-spacing:.06em; margin-top:.3rem; display:block; white-space:pre-line; line-height:1.7; }
 .prod-price { font-family:var(--ff-display); font-size:1.35rem; font-weight:400; color:rgba(255,255,255,0.98); text-shadow:0 0 10px rgba(255,255,255,0.6), 0 0 22px rgba(255,255,255,0.25), 0 0 40px rgba(201,169,110,0.2); white-space:nowrap; flex-shrink:0; line-height:1.2; }
 .group-heading { font-size:.68rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(201,169,110,0.88); padding-bottom:.5rem; border-bottom:1px solid rgba(201,169,110,0.25); margin-top:2.5rem; margin-bottom:0; display:block; font-weight:500; text-shadow:0 0 12px rgba(201,169,110,0.3); }
@@ -1818,8 +1819,8 @@ html, body {
 .surprise-slot { font-family:var(--ff-display); font-size:1.6rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 14px rgba(201,169,110,0.6)); min-height:2.4rem; display:flex; align-items:center; justify-content:center; margin:1rem 0; overflow:visible; }
 .surprise-result { display:none; animation:revealCard .5s ease forwards; }
 @keyframes revealCard { from{opacity:0;transform:scale(0.94)} to{opacity:1;transform:scale(1)} }
-.surprise-result-name { font-family:var(--ff-display); font-size:2rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 16px rgba(201,169,110,0.6)); margin-bottom:.5rem; }
-.surprise-result-ing { font-size:.65rem; color:rgba(220,205,180,0.88); font-style:italic; line-height:1.8; margin-bottom:1.2rem; word-wrap:break-word; white-space:normal; overflow:visible; display:block; }
+.surprise-result-name { font-family:var(--ff-display); font-size:2rem; font-weight:300; background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 0 16px rgba(201,169,110,0.6)); margin-bottom:.2rem; }
+.surprise-result-ing { font-size:.65rem; color:rgba(220,205,180,0.88); font-style:italic; line-height:1.8; margin-bottom:1.2rem; word-wrap:break-word; white-space:normal; overflow:visible; display:flex; flex-direction:column; align-items:center; text-align:center; text-align:center; }
 .surprise-again-btn { padding:.55rem 1.4rem; border:1px solid rgba(201,169,110,0.45); background:linear-gradient(135deg,#e2c899,#c9a96e,#ffe066,#c9a96e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-family:var(--ff-body); font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; filter:drop-shadow(0 0 6px rgba(201,169,110,0.3)); transition:filter .3s; border-radius:3px; }
 .surprise-close { position:absolute; top:.7rem; right:1rem; background:none; border:none; color:rgba(201,169,110,0.5); font-size:1.2rem; cursor:pointer; transition:color .3s; }
 .surprise-close:hover { color:rgba(201,169,110,1); }
@@ -1837,6 +1838,11 @@ html, body {
   margin: 0;
   box-shadow: 0 4px 20px rgba(0,0,0,.5);
 }
+
+#surpriseModal .prod-size { justify-content: center; margin-top: .5rem; }
+#surpriseModal .prod-desc { font-family: 'Russo One', sans-serif; font-style: normal; margin-top: 0.1rem; }
+#surpriseModal .var-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem; width: 100%; }
+#surpriseModal #surpriseResultIng { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .surprise-price-eur {
   font-family: var(--ff-display);
   font-size: 1.35rem;
@@ -2001,6 +2007,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  padding-bottom: 3rem;
   box-sizing: border-box;
   visibility: hidden;
   pointer-events: none;
@@ -2230,49 +2237,156 @@ body.modal-open {
 #wcModalBody::-webkit-scrollbar { width: 3px; }
 #wcModalBody::-webkit-scrollbar-track { background: rgba(201,169,110,0.05); }
 #wcModalBody::-webkit-scrollbar-thumb { background: rgba(201,169,110,0.3); border-radius: 2px; }
-.wc-offer {
-  padding: .8rem 0;
-  border-bottom: 1px solid rgba(201,169,110,0.1);
+/* ─── UNIFIED OFFER MODALS (WC + PROMO) ─── */
+.offer-block {
+  padding: .7rem 0;
 }
-.wc-offer:last-child { border-bottom: none; }
-.wc-share-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .3rem;
-  font-size: .48rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: rgba(201,169,110,0.7);
-  border: 1px solid rgba(201,169,110,0.25);
-  border-radius: 20px;
-  padding: .18rem .6rem;
-  margin-bottom: .4rem;
+.offer-block::after {
+  content: "";
+  display: block;
+  margin: .6rem auto 0;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,110,0.38), rgba(255,220,80,0.45), rgba(201,169,110,0.38), transparent);
+  box-shadow: 0 0 6px rgba(201,169,110,0.18);
 }
-.wc-offer-name {
+.offer-block:last-child::after { display: none; }
+.offer-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .8rem;
+}
+.offer-info { flex: 1; min-width: 0; }
+/* Offer name — same gradient as cocktail result-name */
+.offer-name {
   font-family: var(--ff-display);
-  font-size: .95rem;
-  font-weight: 400;
-  background: linear-gradient(135deg, #e2c899, #c9a96e, #ffe066);
+  font-size: 1.75rem;
+  font-weight: 300;
+  background: linear-gradient(135deg, #e2c899, #c9a96e, #ffe066, #c9a96e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: .04em;
+  filter: drop-shadow(0 0 18px rgba(201,169,110,0.75)) drop-shadow(0 0 35px rgba(255,220,80,0.35));
   display: block;
   margin-bottom: .35rem;
+  line-height: 1.15;
 }
-
-.wc-offer-price {
+/* Share badge */
+.offer-share-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  background: linear-gradient(135deg, rgba(201,169,110,0.95), rgba(162,120,55,0.95));
+  color: #0e0c0a;
+  font-size: .46rem;
+  font-family: var(--ff-body);
+  font-weight: 600;
+  letter-spacing: .06em;
+  padding: .18rem .5rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(201,169,110,0.5), 0 2px 6px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+  border: none;
+}
+/* Items list — styled like cocktail ingredients */
+.offer-items { margin-top: .15rem; }
+.offer-item-row {
+  display: flex;
+  align-items: baseline;
+  gap: .3rem;
+  padding: .07rem 0;
+  font-style: italic;
+  color: rgba(220,205,180,0.88);
+  font-size: .65rem;
+  line-height: 1.7;
+  flex-wrap: nowrap;
+}
+.offer-item-label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .25rem;
+  white-space: nowrap;
+}
+.offer-qty {
   font-family: var(--ff-display);
-  font-size: 1.1rem;
-  color: rgba(201,169,110,0.95);
-  margin-top: .3rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: rgba(255,215,90,0.85);
+  line-height: 1;
+  min-width: 2rem;
+  flex-shrink: 0;
 }
-@media (max-width: 600px) {
-  #wcModal { padding: 1rem; padding-bottom: 4.5rem; align-items: center; }
-  #wcModalBox { max-width: 96%; max-height: 88vh; }
+.offer-item-name {
+  color: rgba(220,205,180,0.92);
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: .80rem;
+  letter-spacing: .04em;
 }
-
-/* ─── WC MODAL ─── */
+.offer-item-measure {
+  display: inline-flex;
+  align-items: center;
+  font-size: .80rem;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(220,205,180,0.92);
+  letter-spacing: .02em;
+  font-style: normal;
+  margin-left: .3rem;
+}
+.offer-item-measure::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #ffd27a;
+  box-shadow: 0 0 4px rgba(255,210,122,0.5);
+  flex-shrink: 0;
+}
+/* Price circle — same as surprise-price-wrap */
+.offer-price-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  margin-top: .2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+  text-align: center;
+}
+.offer-price-eur {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.98);
+  text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 22px rgba(255,255,255,0.25), 0 0 40px rgba(201,169,110,0.2);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.offer-price-bgn {
+  display: block;
+  font-size: 1.0rem;
+  color: rgba(200,190,175,0.9);
+  letter-spacing: .03em;
+  line-height: 1.2;
+  font-family: var(--ff-display);
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(200,190,175,0.5), 0 0 20px rgba(200,190,175,0.2);
+}
+@media(max-width:600px) {
+  .offer-name { font-size: 1.4rem; }
+  .offer-price-wrap { width: 70px; height: 70px; }
+  .offer-price-eur { font-size: 1.15rem; }
+}
 .wc-btn { animation-delay: 0.8s; }
 #wcModal {
   display: flex;
@@ -2431,10 +2545,10 @@ body.modal-open {
 .wc-item-measure{font-size:.6rem;font-weight:500;color:rgba(220,200,160,.7);letter-spacing:.04em;text-transform:uppercase;flex-shrink:0;margin-left:.15rem;}.wc-item-spacer{flex:1;}
 
 @keyframes wcEmojiPulse {
-  0%,100% { opacity:.7; filter:drop-shadow(0 0 2px rgba(255,220,80,0.2)); }
-  50%     { opacity:1;  filter:drop-shadow(0 0 10px rgba(255,220,80,0.8)) drop-shadow(0 0 20px rgba(201,169,110,0.5)); }
+  0%,100% { opacity:1; filter:none; }
+  50%     { opacity:1; filter:drop-shadow(0 0 6px rgba(255,255,255,0.4)); }
 }
-.wc-emoji { display:inline-block; animation:wcEmojiPulse 2.5s ease-in-out infinite; }
+.wc-emoji { display:inline-block; animation:wcEmojiPulse 3s ease-in-out infinite; font-style:normal; -webkit-text-fill-color: initial; background: none; filter: none; }
 .wc-offer:nth-child(2) .wc-emoji { animation-delay:.5s; }
 .wc-offer:nth-child(3) .wc-emoji { animation-delay:1s; }
 .wc-offer:nth-child(4) .wc-emoji { animation-delay:1.5s; }
@@ -2443,6 +2557,198 @@ body.modal-open {
 .wc-offer:nth-child(7) .wc-emoji { animation-delay:1.2s; }
 .wc-offer:nth-child(8) .wc-emoji { animation-delay:.7s; }
 .wc-offer:nth-child(9) .wc-emoji { animation-delay:1.8s; }
+
+/* ─── SPECIAL CARDS SECTION ─── */
+.special-cards-section { margin: .5rem 0 1.8rem; }
+.special-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.special-card {
+  position: relative;
+  border: 1px solid rgba(201,169,110,0.22);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(160deg, #1c1510 0%, #0e0c0a 60%, #1a1208 100%);
+  min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: border-color .35s ease, transform .35s ease, box-shadow .35s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.special-card:hover {
+  border-color: rgba(201,169,110,0.65);
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(201,169,110,0.12), 0 8px 30px rgba(0,0,0,0.5);
+}
+.special-card:active { transform: translateY(-1px); }
+.sc-glow { position: absolute; inset: 0; pointer-events: none; }
+.sc-glow-cocktail { background: radial-gradient(ellipse at 50% 20%, rgba(201,169,110,0.22) 0%, transparent 65%); }
+.sc-glow-worldcup { background: radial-gradient(ellipse at 50% 20%, rgba(192,57,43,0.25) 0%, transparent 65%); }
+.sc-glow-promo    { background: radial-gradient(ellipse at 50% 20%, rgba(74,127,193,0.22) 0%, transparent 65%); }
+.sc-badge {
+  display: block;
+  text-align: right;
+  margin: 0 0 .4rem 0;
+  background: none;
+  border: none;
+  font-size: .60rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(201,169,110,0.65); padding: 0;
+  font-family: var(--ff-body); font-weight: 500;
+}
+.sc-gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,110,0.45), rgba(255,220,80,0.4), rgba(201,169,110,0.45), transparent);
+  margin: 0 0 .55rem 0; position: relative; z-index: 1;
+  box-shadow: 0 0 6px rgba(201,169,110,0.2);
+}
+@media(max-width:600px) { .sc-gold-line { display: none; } }
+.sc-body { position: relative; z-index: 1; padding: .6rem .9rem .85rem; }
+.sc-icon { font-size: 1.9rem; line-height: 1; display: block; position: absolute; top: .5rem; right: .75rem; animation: scIconPulse 3s ease-in-out infinite; }
+@media(min-width:601px) { .sc-icon { position: relative; top: auto; right: auto; margin-bottom: .4rem; margin-left: .3rem; } }
+@media(max-width:600px) { .sc-icon { right: .3rem; } }
+@keyframes scIconPulse {
+  0%, 100% { filter: drop-shadow(0 0 3px rgba(201,169,110,0.3)) drop-shadow(0 0 6px rgba(201,169,110,0.1)); }
+  50%       { filter: drop-shadow(0 0 10px rgba(201,169,110,0.9)) drop-shadow(0 0 22px rgba(255,220,80,0.5)); }
+}
+.special-cards-grid .special-card:nth-child(2) .sc-icon { animation-delay: 1s; }
+.special-cards-grid .special-card:nth-child(3) .sc-icon { animation-delay: 2s; }
+.sc-title {
+  font-family: var(--ff-display); font-size: 1.05rem; font-weight: 400;
+  color: rgba(226,200,153,0.98); letter-spacing: .03em; line-height: 1.2;
+  margin-bottom: .22rem; text-shadow: 0 0 14px rgba(201,169,110,0.2);
+}
+.sc-sub {
+  font-size: .62rem; letter-spacing: .15em; text-transform: uppercase;
+  color: rgba(235,215,180,0.97); margin-bottom: .6rem; font-family: var(--ff-body);
+}
+.sc-cta {
+  display: inline-block; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(240,220,170,1); border: 1px solid rgba(201,169,110,0.65);
+  padding: .32rem .7rem; border-radius: 2px; font-family: var(--ff-body);
+  transition: border-color .3s, color .3s;
+}
+.special-card:hover .sc-cta { border-color: rgba(255,220,80,0.8); color: rgba(255,235,160,1); }
+@media(max-width:345px) { .sc-icon { display: none; } }
+@media(max-width:600px) { .sc-icon { top: .5rem; } }
+.sc-title-mob { display: none; }
+.sc-title-desk { display: inline; }
+@media(max-width:600px) { .sc-title-mob { display: inline; } .sc-title-desk { display: none; } }
+@media(max-width:600px) {
+  .special-cards-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .special-card { min-height: 120px; }
+  .sc-icon { font-size: 1.3rem; margin-bottom: .3rem; }
+  .sc-title { font-size: .82rem; }
+  .sc-sub { font-size: .38rem; letter-spacing: .12em; margin-bottom: .4rem; color: rgba(220,195,155,0.85); }
+
+  .sc-cta { font-size: .38rem; letter-spacing: .14em; padding: .22rem .45rem; }
+  .sc-badge { font-size: .35rem; padding: .14rem .38rem; }
+  .sc-body { padding: 0 .5rem .6rem; }
+  .sc-gold-line { margin: 0 .3rem .4rem; }
+}
+
+
+/* ─── PROMO MODAL ─── */
+#promoModal {
+  display: flex;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  z-index: 99980;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 4.5rem;
+  box-sizing: border-box;
+  visibility: hidden;
+  pointer-events: none;
+}
+#promoModal.open { visibility: visible; pointer-events: all; }
+#promoModalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4,3,2,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+#promoModal.open #promoModalBackdrop { opacity: 1; }
+#promoModalBox {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(160deg, #1c1510 0%, #0e0c0a 55%, #1a1208 100%);
+  border: 1px solid rgba(201,169,110,0.35);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 60px rgba(74,127,193,0.14), 0 0 120px rgba(201,169,110,0.06), 0 30px 80px rgba(0,0,0,0.7);
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.18s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+#promoModal.open #promoModalBox { opacity: 1; transform: scale(1); }
+#promoModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.4rem 0.9rem;
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+  flex-shrink: 0;
+}
+#promoModalTitle {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #e2c899, #c9a96e, #ffe066);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: .06em;
+  display: block;
+}
+#promoModalTitle::after {
+  content: "";
+  display: block;
+  margin-top: .5rem;
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, #e2c899, #ffe066, #c9a96e, transparent);
+  box-shadow: 0 0 8px rgba(201,169,110,0.7), 0 0 16px rgba(201,169,110,0.3);
+}
+#promoModalClose {
+  background: none;
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 50%;
+  color: rgba(201,169,110,0.8);
+  font-size: .85rem;
+  width: 30px; height: 30px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .2s, color .2s, box-shadow .2s;
+  flex-shrink: 0;
+}
+#promoModalClose:hover { border-color: rgba(201,169,110,0.8); color: #ffe066; box-shadow: 0 0 10px rgba(201,169,110,0.3); }
+#promoModalBody {
+  overflow-y: auto;
+  padding: .6rem 1rem 1.2rem;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+#promoModalBody::-webkit-scrollbar { width: 3px; }
+#promoModalBody::-webkit-scrollbar-track { background: rgba(201,169,110,0.05); }
+#promoModalBody::-webkit-scrollbar-thumb { background: rgba(201,169,110,0.3); border-radius: 2px; }
+@media(max-width:600px) {
+  #promoModalBox { max-width: 96%; max-height: 88vh; }
+}
 </style>
   <link rel="icon" type="image/png" href="data:image/png;base64,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">
 </head>
@@ -2724,7 +3030,7 @@ function unlockBodyScroll() {
     <li><a href="#menu" class="t-menu-nav nav-link">Меню</a></li>
     <li><a href="#reservations" class="t-res-nav nav-link">Резервации</a></li>
     <li><a href="#location" class="t-loc-nav nav-link">Локация</a></li>
-    <li><a href="#promo" class="t-promo-nav nav-link">Промоция 🎡</a></li>
+    <li><a href="#promo" class="t-promo-nav nav-link">Късмет 🍀</a></li>
   </ul>
   <div class="lang-sw">
     <button class="lang-btn active" id="btn-bg">БГ</button>
@@ -2803,11 +3109,43 @@ function unlockBodyScroll() {
     <p class="section-tag">Craft Drinks & Spirits</p>
     <h2 class="section-h t-menu-h">Нашето <em class="fancy-gold">Меню</em></h2>
     <div class="divider"></div>
-    <div style="text-align:center;margin:1rem 0 .6rem;">
-      <button id="surpriseBtn" onclick="openSurprise()" class="surprise-btn t-surprise-btn"><span class="surprise-dice">&#x1F3B2;</span>&nbsp;&nbsp;Избери случаен коктейл</button>
-    </div>
-    <div style="text-align:center;margin:.0rem 0 1.5rem;">
-      <button id="wcBtn" onclick="openWCModal()" class="surprise-btn wc-btn"><span>&#x1F3C6;</span>&nbsp;&nbsp;<span class="t-wc-btn">FIFA World Cup Меню</span></button>
+    <div class="special-cards-section">
+      <div class="special-cards-grid">
+
+        <div class="special-card" onclick="openSurprise()">
+          <div class="sc-glow sc-glow-cocktail"></div>
+          <span class="sc-icon">🎲</span>
+          <div class="sc-body">
+            <div class="sc-gold-line"></div>
+            <div class="sc-title t-sc-title1"><span class="sc-title-desk">Случаен коктейл</span><span class="sc-title-mob">Случаен<br>коктейл</span></div>
+            <div class="sc-sub t-sc-sub1"><span class="sc-title-desk">Изненада на вечерта</span><span class="sc-title-mob">Изненада на<br>вечерта</span></div>
+            <span class="sc-cta t-sc-cta1">Завърти →</span>
+          </div>
+        </div>
+
+        <div class="special-card" onclick="openWCModal()">
+          <div class="sc-glow sc-glow-worldcup"></div>
+          <span class="sc-icon">⚽</span>
+          <div class="sc-body">
+            <div class="sc-gold-line"></div>
+            <div class="sc-title t-sc-title2"><span class="sc-title-desk">World Cup Меню</span><span class="sc-title-mob">World Cup<br>Меню</span></div>
+            <div class="sc-sub t-sc-sub2"><span class="sc-title-desk">Специална оферта</span><span class="sc-title-mob">Специална<br>оферта</span></div>
+            <span class="sc-cta t-sc-cta2">Виж менюто →</span>
+          </div>
+        </div>
+
+        <div class="special-card" onclick="openPromoModal()">
+          <div class="sc-glow sc-glow-promo"></div>
+          <span class="sc-icon">🍾</span>
+          <div class="sc-body">
+            <div class="sc-gold-line"></div>
+            <div class="sc-title t-sc-title3"><span class="sc-title-desk">Промоции с бутилки</span><span class="sc-title-mob">Промоции<br>бутилки</span></div>
+            <div class="sc-sub t-sc-sub3"><span class="sc-title-desk">5 ексклузивни оферти</span><span class="sc-title-mob">5 ексклузивни<br>оферти</span></div>
+            <span class="sc-cta t-sc-cta3">Виж офертите →</span>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="menu-tabs" id="menuTabs"></div>
     
@@ -2942,7 +3280,7 @@ const CATEGORIES = [
     items: [
       { name: { bg: "Текила Сънрайз", en: "Tequila Sunrise" },    desc: { bg: "текила, фреш портокал, гренадин",              en: "tequila, fresh orange, grenadine"              }, size: "250мл", price: 5.50 , taste: "sweet" },
       { name: { bg: "Блъди Мери", en: "Bloody Mary" },        desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon" }, size: "250мл", price: 5.50 , taste: "spicy" },
-        { name: { bg: "Мохито", en: "Mojito" }, desc: { bg: "ром, мента, лайм, сироп кафява захар, сода", en: "rum, mint, lime, brown sugar syrup, soda" }, variants: ['classic1', 'mango', 'strawberry', 'raspberry'], size: "250мл", price: 5.50, note: { bg: "", en: "" } , taste: "both" },
+        { name: { bg: "Мохито", en: "Mojito" }, desc: { bg: "ром, свежи листа от мента, лайм, сироп кафява захар, сода", en: "rum, mint, lime, brown sugar syrup, soda" }, variants: ['classic1', 'mango', 'strawberry', 'raspberry'], size: "250мл", price: 5.50, note: { bg: "", en: "" } , taste: "both" },
         { badge: true, name: { bg: "Дайкири", en: "Daiquiri" }, desc: { bg: "ром, захарен сироп, лайм", en: "rum, sugar syrup, lime" }, variants: ['classic1', 'mango', 'strawberry', 'raspberry'], size: "180мл", price: 5.00, note: { bg: "", en: "" } , taste: "fresh" },
       { name: { bg: "Лонг Айланд", en: "Long Island" },       desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро",en: "gin, vodka, rum, tequila, cola, lime, cointreau" }, size: "250мл", price: 7.00 , taste: "both" },
       { badge: true, name: { bg: "Синя Лагуна", en: "Blue Lagoon" },       desc: { bg: "водка, синьо кюрасо, лайм, спрайт",            en: "vodka, blue curacao, lime, sprite"               }, size: "250мл", price: 5.50 , taste: "sweet" },
@@ -2958,13 +3296,13 @@ const CATEGORIES = [
       { badge: true, name: { bg: "Ягодов Оргазъм", en: "Strawberry Orgasm" },      desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди,\n кокосови стърготини, щипка лайм, сметана", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, dash of lime, cream" }, size: "250мл", price: 4.50 , taste: "creamy" },
       { badge: "new", name: { bg: "Тропическо Мангово Маце", en: "Tropical Mango Babe" }, desc: { bg: "пюре от манго, банан, мляко, мед, лайм, сметана", en: "mango purée, banana, milk, honey, lime, cream" }, size: "250мл", price: 5.00 , taste: "creamy" },
       { badge: "new", name: { bg: "Пинк Бери Тоник", en: "Pink Berry Tonic" }, desc: { bg: "ягоди, малини, лимон, лайм, розов тоник, гренадин", en: "strawberries, raspberries, lemon, lime, pink tonic, grenadine" }, size: "250мл", price: 5.50 , taste: "fresh" },
-      { badge: "new", name: { bg: "Еспресо Мохито", en: "Espresso Mojito" }, desc: { bg: "мента, лайм, спрайт, еспресо, захарен сироп", en: "mint, lime, sprite, espresso, sugar syrup" }, size: "250мл", price: 5.50 , taste: "both" },
+      { badge: "new", name: { bg: "Еспресо Мохито", en: "Espresso Mojito" }, desc: { bg: "свежи листа от мента, лайм, спрайт, еспресо, захарен сироп", en: "mint, lime, sprite, espresso, sugar syrup" }, size: "250мл", price: 5.50 , taste: "both" },
     ]
   },
   {
     id: "sig", label: { bg: "Авторски Коктейли\nLA ROCCA", en: "LA ROCCA Signature Cocktails" },
     items: [
-        { badge: "new", name: { bg: "Лавандулов Бриз", en: "Lavender Breeze" }, desc: { bg: "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, мента", en: "Bombay gin, lime juice, lavender syrup, Schweppes pink tonic, mint" }, size: "250мл", price: 7.00 , taste: "fresh" },
+        { badge: "new", name: { bg: "Лавандулов Бриз", en: "Lavender Breeze" }, desc: { bg: "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, свежи листа от мента", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint" }, size: "250мл", price: 7.00 , taste: "fresh" },
       { badge: true, name: { bg: "Кадифена Праскова", en: "Velvet Peach" },desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко",             en: "fresh peach, peach purée, licor 43, prosecco"       }, size: "250мл", price: 7.50 , taste: "both" },
         { badge: "new", name: { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz" }, desc: { bg: "лимончело, ликьор личи, просеко, сода", en: "limoncello, lychee liqueur, prosecco, soda" }, size: "250мл", price: 7.00, taste: "both" },
         { badge: "new", name: { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion" }, desc: { bg: "Абсолют Ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup" }, note: { bg: "✦ Сервира се с шот охладено просеко", en: "✦ Served with a chilled prosecco shot on the side"}, size: "180мл", price: 7.00, taste: "both" },
@@ -3148,7 +3486,7 @@ const CATEGORIES = [
           { name: { bg: "Боржоми", en: "Borjomi" }, desc: { bg: "Минерална вода от Грузия, богата на соли и минерали", en: "Mineral water from Georgia, rich in salts and minerals"        }, size: "330мл", price: 2.50 },
           { name: { bg: "Перие", en: "Perrier" }, desc: { bg: "Естествено газирана изворна вода от Южна Франция", en: "Naturally sparkling spring water from Southern France"        }, size: "330мл", price: 3.00 },
         { name: { bg: "Минерална вода Девин", en: "Devin Mineral Water" }, desc: { bg: "", en: "" }, size: "500мл", price: 1.50 },
-        { name: { bg: "Red Bull",             en: "Red Bull"       }, desc: { bg: "",       en: ""       }, size: "250мл", price: 3.50 },
+        { name: { bg: "Ред Бул",             en: "Red Bull"       }, desc: { bg: "",       en: ""       }, size: "250мл", price: 3.50 },
           { name: { bg: "Тоник Швепс", en: "Tonic Schweppes" }, desc: { bg: "", en: "" }, variants: ["classic", "pink","purple"], size: "250мл", price: 2.50 },
           { name: { bg: "Thomas Henry", en: "Thomas Henry" }, desc: { bg: "", en: "" }, variants: ["grapefruit"], size: "200мл", price: 2.50 },
       ]},
@@ -3159,16 +3497,16 @@ const CATEGORIES = [
         { name: { bg: "Билков Чай",     en: "Herbal Tea"     }, desc: { bg: "", en: "" }, note: { bg: "✦ по желание: мед · лимон · джинджифил · ментови листа", en: "✦ optional add-ons: honey · lemon · ginger · mint leaves" }, size: "250мл", price: 2.50 },
       ]},
       { heading: { bg: "Лимонади", en: "Lemonades" }, items: [
-        { name: { bg: "Лимонада", en: "Lemonade" }, desc: { bg: "плодов сироп, мента, лимон, сода", en: "fruit syrup, mint, lemon, soda" }, size: "300мл", price: 3.50, note: { bg: "✦ Попитайте нашия сервитьор за наличните вкусове", en: "✦ Ask your waiter for available flavours" } },
+        { name: { bg: "Лимонада", en: "Lemonade" }, desc: { bg: "плодов сироп, свежи листа от мента, лимон, сода", en: "fruit syrup, mint, lemon, soda" }, size: "300мл", price: 3.50, note: { bg: "✦ Попитайте нашия сервитьор за наличните вкусове", en: "✦ Ask your waiter for available flavours" } },
       ]},
         {
             heading: { bg: "Цитронади / Безалкохолна Мента", en: "Citrusnade / Non-Alc Mint" }, items: [
-                { name: { bg: "Цитронада", en: "Citrusnade" }, desc: { bg: "цитруси, сода, мента, захарен сироп", en: "citrus, soda, mint, sugar syrup" }, variants:["lemon","orangecit","grapefruit"], size: "300мл", price: 3.50, note: { bg: "", en: "" } },
-        { name: { bg: "Безалкохолна мента + Сода",   en: "Non-Alc Mint + Soda"   }, desc: { bg: "сироп мента, лимон, сода", en: "mint syrup, lemon, soda" }, size: "300мл", price: 3.00 },
-        { name: { bg: "Безалкохолна мента + Спрайт", en: "Non-Alc Mint + Sprite" }, desc: { bg: "сироп мента, лимон, спрайт", en: "mint syrup, lemon, sprite" }, size: "300мл", price: 3.00 },
+                { name: { bg: "Цитронада", en: "Citrusnade" }, desc: { bg: "цитруси, сода, свежи листа от мента, захарен сироп", en: "citrus, soda, mint, sugar syrup" }, variants:["lemon","orangecit","grapefruit"], size: "300мл", price: 3.50, note: { bg: "", en: "" } },
+        { name: { bg: "Безалкохолна мента<br>+ Сода",   en: "Non-Alc Mint<br>+ Soda"   }, desc: { bg: "сироп от мента, лимон, сода", en: "mint syrup, lemon, soda" }, size: "300мл", price: 3.00 },
+        { name: { bg: "Безалкохолна мента<br>+ Спрайт", en: "Non-Alc Mint<br>+ Sprite" }, desc: { bg: "сироп от мента, лимон, спрайт", en: "mint syrup, lemon, sprite" }, size: "300мл", price: 3.00 },
       ]},
       { heading: { bg: "Плодови шейкове", en: "Fruit Milkshakes" }, items: [
-          { name: { bg: "Плодов шейк", en: "Fruit Shake" }, desc: { bg: "мляко, сладолед, плод, сметана", en: "milk, ice cream, fruit, cream" }, variants: ['banana', 'chocolate', 'strawberry', 'peach'], size: "200мл", price: 4.00, note: { bg: "", en: "" } },
+          { name: { bg: "Плодов шейк", en: "Fruit Shake" }, desc: { bg: "мляко, сладолед, плод, сметана", en: "milk, ice cream, fruit, cream" }, variants: ['banana', 'chocolate', 'strawberry', 'peach'], size: "300мл", price: 4.00, note: { bg: "", en: "" } },
       ]},
       { heading: { bg: "Натурални сокове", en: "Natural Juices" }, items: [
           { name: { bg: "Натурален сок", en: "Natural Juice" }, desc: { bg: "", en: "" }, variants: ['pineapple', 'orangecit', 'cherry', 'cassis', 'peach', 'apple', 'banana', 'tomato'], size: "250мл", price: 2.50, note: { bg: "", en: "" } },
@@ -3216,7 +3554,7 @@ var UI = {
     ".t-submit":"Изпратете заявка", ".t-ok":"✦ Заявката ви е получена. Ще потвърдим до 24 часа.",
     ".t-loc-tag":"Локация",".t-loc-addr-l":"Адрес",".t-loc-land-l":"Ориентир",
     ".t-loc-land-v":"Срещу фонтана, в центъра на Черноморец",".t-loc-btn":"Отвори в Google Maps",
-    ".t-promo-nav":"Промоция \uD83C\uDFA1",
+    ".t-promo-nav":"Късмет 🍀",
     ".t-promo-tag":"Специална оферта",
     ".t-spin-btn":"Завърти колелото", 
     ".t-modal-label":"Твоят коктейл е",
@@ -3226,41 +3564,22 @@ var UI = {
     ".t-lose-title":"Опитай пак утре",
     ".t-lose-sub":"Късметът е на страната на смелите \uD83C\uDF40",
     ".t-lose-btn":"Затвори",
-    ".t-modal-waiter":"Покажете това на нашия сервитьор", ".t-surprise-vid":"Вид коктейл", ".t-surprise-vkus":"Вкус", ".t-surprise-alc":"Алкохолен", ".t-surprise-non":"Безалкохолен", ".t-surprise-sweet":"Сладък", ".t-surprise-fresh":"Освежаващ", ".t-surprise-both":"Сладко-кисел", ".t-surprise-creamy":"Кремообразен / Десертен", ".t-surprise-spicy":"Пикантен / Солен", ".t-surprise-again":"Отново"
+        ".t-modal-waiter": "Покажете това на нашия сервитьор", ".t-surprise-vid": "Вид коктейл", ".t-surprise-vkus": "Вкус", ".t-surprise-alc": "Алкохолен", ".t-surprise-non": "Безалкохолен", ".t-surprise-sweet": "Сладък", ".t-surprise-fresh": "Освежаващ", ".t-surprise-both": "Сладко-кисел", ".t-surprise-creamy": "Кремообразен & Десертен", ".t-surprise-spicy":"Пикантен & Солен", ".t-surprise-again":"Отново",
+    ".t-sc-badge1":"Всяка вечер",".t-sc-title1":"Случаен коктейл",".t-sc-sub1":"Изненада на вечерта",".t-sc-cta1":"Завърти →",
+    ".t-sc-badge2":"FIFA 2026",".t-sc-title2":"World Cup Меню",".t-sc-sub2":"Специална оферта",".t-sc-cta2":"Виж менюто →",
+    ".t-sc-title3":"Промоции с бутилки",".t-sc-sub3":"5 ексклузивни оферти",".t-sc-cta3":"Виж офертите →",
+    ".t-promo-btn":"Промоции с бутилки"
   },
   en: {
-    ".t-about":"About",".t-menu-nav":"Menu",".t-res-nav":"Reservations",".t-loc-nav":"Location",
+    ".t-about":"About",".t-menu-nav":"Menu",".t-res-nav":"Reservations",".t-loc-nav":"Location",".t-promo-nav":"Lucky 🍀",
     ".t-city":"Chernomorets Center, Bulgaria",
     ".t-est":"Cocktail Bar — 20+ years of history",
     ".t-tag":"The emblem of nightlife in Chernomorets",
-    ".t-cta":"Reserve a Table", ".t-place-nav":"Reserve a Table", ".t-spin-hint":"Tap the wheel to spin", ".t-surprise-vid":"Cocktail Type", ".t-premium-note":"❖ With premium alcohol: + 5€/10 BGN", ".t-surprise-vkus":"Taste", ".t-surprise-again":"Again", ".t-surprise-hint":"Pick a random cocktail", ".t-surprise-title":"Alcoholic or Non-Alcoholic?", ".t-surprise-alc":"Alcoholic", ".t-surprise-non":"Non-Alcoholic", ".t-surprise-sweet":"Sweet", ".t-surprise-fresh":"Fresh & Sour", ".t-surprise-both":"Balanced", ".t-surprise-creamy":"Creamy / Dessert", ".t-surprise-spicy":"Spicy / Savoury", ".t-surprise-non":"Non-Alcoholic", ".t-surprise-again":"Again",
-    ".t-story-tag":"Our Story",
-    ".t-f1":"Refreshing cocktails and diverse drinks",
-    ".t-f2":"Energetic atmosphere with great music",
-    ".t-f3":"Darts, foosball and billiards",
-    ".t-f4":"In the heart of Chernomorets — St. Nikola 1",
-    ".t-s1":"Years of history",".t-s2":"Cocktails",".t-s3":"Evening Vibes",".t-s3n":"Every",".t-s4":"Variety of games",
-    ".t-hist-tag":"HISTORY",
-    ".t-res-tag":"Book Your Evening",
-    ".t-res-p":"Reserve your table at La Rocca and we will take care of an unforgettable evening.",
-    ".t-addr-l":"Address",".t-addr-s":"",
-    ".t-hrs-l":"Opening Hours",".t-hrs-v":"Every day | 20:00 – 04:00",".t-ph-l":"Phone",
-    ".t-fl1":"Full Name", ".t-name-ph":"Your Name",".t-fl2":"Phone",".t-fl3":"Date",".t-fl4":"Time",".t-fl5":"Number of Guests",".t-fl6":"Special Requests", ".t-note-ph":"Occasion, table preferences...", ".t-err-name":"Please enter your name", ".t-err-date":"Please select a date",
-    ".t-g1":"1 person",".t-g2":"2 people",".t-g3":"3 people",".t-g4":"4 people",".t-g5":"5 people",".t-g6":"6+ people (group)",
-    ".t-submit":"Send Request", ".t-ok":"✦ Your request has been received. We will confirm within 24 hours.",
-    ".t-loc-tag":"Location",".t-loc-addr-l":"Address",".t-loc-land-l":"Landmark",
-    ".t-loc-land-v":"Opposite the fountain, in the center of Chernomorets",".t-loc-btn":"Open in Google Maps",
-    ".t-promo-nav":"Promotion \uD83C\uDFA1",
-    ".t-promo-tag":"Special Offer",
-    ".t-spin-btn":"Spin the wheel", 
-    ".t-modal-label":"Your cocktail is",
-    ".t-modal-discount":"Enjoy 10% discount",
-    ".t-modal-ok":"Done", ".t-modal-note":"⚠️ Show this to your waiter before closing", ".t-modal-ingr-label":"Ingredients",
-    ".t-lose-label":"No luck today",
-    ".t-lose-title":"Try again tomorrow",
-    ".t-lose-sub":"Fortune favors the bold \uD83C\uDF40",
-    ".t-lose-btn":"Close",
-    ".t-modal-waiter":"Show this to your waiter"
+      ".t-cta": "Reserve a Table", ".t-place-nav": "Reserve a Table", ".t-spin-hint": "Tap the wheel to spin", ".t-surprise-vid": "Cocktail Type", ".t-premium-note": "❖ With premium alcohol: + 5€/10 BGN", ".t-surprise-vkus": "Taste", ".t-surprise-again": "Again", ".t-surprise-hint": "Pick a random cocktail", ".t-surprise-title": "Alcoholic or Non-Alcoholic?", ".t-surprise-alc": "Alcoholic", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-sweet": "Sweet", ".t-surprise-fresh": "Fresh & Sour", ".t-surprise-both": "Balanced", ".t-surprise-creamy": "Creamy & Dessert", ".t-surprise-spicy":"Spicy & Savoury", ".t-surprise-non":"Non-Alcoholic", ".t-surprise-again":"Again",
+    ".t-sc-badge1":"Every Evening",".t-sc-title1":"Random Cocktail",".t-sc-sub1":"Tonight's surprise",".t-sc-cta1":"Spin →",
+    ".t-sc-badge2":"FIFA 2026",".t-sc-title2":"World Cup Menu",".t-sc-sub2":"Special offer",".t-sc-cta2":"See menu →",
+    ".t-sc-title3":"Bottle Promotions",".t-sc-sub3":"5 exclusive offers",".t-sc-cta3":"See offers →",
+    ".t-promo-btn":"Bottle Promotions"
   }
 };
 
@@ -3329,7 +3648,7 @@ function applyLang(lang) {
 window.CATEGORIES = CATEGORIES;
 window.renderCategory = renderCategory;
 window.renderGrid = renderGrid;
-var activeCategory = CATEGORIES[0].id;
+var activeCategory = null;
 
 function renderItem(item, lang) {
   var badge = '';
@@ -3422,6 +3741,8 @@ function renderItem(item, lang) {
         cold: 'var-pill-cold',
         purple: 'var-pill-purple',
     };
+    window.varPillLabels = varPillLabels;
+    window.varPillClass = varPillClass;
   var varPills = '';
     if (item.variants && item.variants.length) {
         varPills = '<span class="var-pills">' +
@@ -3809,7 +4130,7 @@ renderMenu();
     var COCKTAIL_DESC_BG = {
         "Текила Сънрайз": "текила, фреш портокал, гренадин",
         "Блъди Мери": "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон",
-        "Мохито": "ром, мента, лайм, сироп кафява захар, сода",
+        "Мохито": "ром, свежи листа от мента, лайм, сироп кафява захар, сода",
         "Дайкири": "ром, захарен сироп, лайм",
         "Лонг Айланд": "джин, водка, ром, текила, кола, лайм, коантро",
         "Синя Лагуна": "водка, синьо кюрасо, лайм, спрайт",
@@ -3819,7 +4140,7 @@ renderMenu();
         "Куба Либре": "тъмен ром, кола, лайм",
         "Аперол Шприц": "просеко, аперол, портокал, сода",
         "Кадифена Праскова": "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко",
-        "Лавандулов Бриз": "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, мента",
+        "Лавандулов Бриз": "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, свежи листа от мента",
         "Лимончело Личи Шприц": "лимончело, ликьор личи, просеко, сода",
         "Секс с Мръсницата": "водка, ликьор пъпеш, гренадин, сок ананас, лайм",
         "Секс на Плажа": "водка, сок ананас, сок праскова, гренадин, ликьор праскова",
@@ -3828,7 +4149,7 @@ renderMenu();
         "Тропически Кик": "ром, сок манго, сок ананас, гренадин, лайм",
         "Тропическо Мангово Маце": "пюре от манго, банан, мляко, мед, лайм, сметана",
         "Пинк Бери Тоник": "ягоди, малини, лимон, лайм, розов тоник, гренадин",
-        "Еспресо Мохито": "мента, лайм, спрайт, еспресо, захарен сироп"
+        "Еспресо Мохито": "свежи листа от мента, лайм, спрайт, еспресо, захарен сироп"
     };
     var COCKTAIL_DESC_EN = {
         "Tequila Sunrise": "tequila, fresh orange, grenadine",
@@ -3844,7 +4165,7 @@ renderMenu();
         "Cuba Libre": "dark rum, cola, lime",
         "Aperol Spritz": "prosecco, aperol, orange, soda",
         "Velvet Peach": "fresh peach, peach purée, licor 43, lime, prosecco",
-        "Lavender Breeze": "Bombay gin, lime juice, lavender syrup, Schweppes pink tonic, mint",
+        "Lavender Breeze": "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint",
         "Limoncello Lychee Spritz": "limoncello, lychee liqueur, prosecco, soda",
         "Sex with the Dirty": "vodka, melon liqueur, grenadine, pineapple juice, lime",
         "Sex on the Beach": "vodka, pineapple juice, peach juice, grenadine, peach liqueur",
@@ -4576,8 +4897,8 @@ var COLORS = [
         <button class="surprise-choice-btn" onclick="startSurpriseTaste('sweet')">&#x1F36F; <span class="t-surprise-sweet">Сладък</span></button>
         <button class="surprise-choice-btn" onclick="startSurpriseTaste('fresh')">&#x1F34B; <span class="t-surprise-fresh">Освежаващ</span></button>
         <button class="surprise-choice-btn" onclick="startSurpriseTaste('both')">&#x2696;&#xFE0F; <span class="t-surprise-both">Сладко-кисел</span></button>
-        <button class="surprise-choice-btn" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен / Десертен</span></button>
-        <button class="surprise-choice-btn" onclick="startSurpriseTaste('spicy')">&#x1F336;&#xFE0F; <span class="t-surprise-spicy">Пикантен / Солен</span></button>
+        <button class="surprise-choice-btn" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен & Десертен</span></button>
+        <button class="surprise-choice-btn" onclick="startSurpriseTaste('spicy')">&#x1F336;&#xFE0F; <span class="t-surprise-spicy">Пикантен & Солен</span></button>
       </div>
     </div>
     <div id="surpriseStep1c" style="display:none;">
@@ -4585,7 +4906,7 @@ var COLORS = [
       <div class="surprise-choice-btns">
         <button class="surprise-choice-btn" onclick="startSurpriseTaste('fresh')">&#x1F34B; <span class="t-surprise-fresh">Освежаващ</span></button>
         <button class="surprise-choice-btn" onclick="startSurpriseTaste('both')">&#x2696;&#xFE0F; <span class="t-surprise-both">Сладко-кисел</span></button>
-        <button class="surprise-choice-btn" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен / Десертен</span></button>
+        <button class="surprise-choice-btn" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен & Десертен</span></button>
       </div>
     </div>
     <div id="surpriseStep2" style="display:none;">
@@ -4605,16 +4926,16 @@ var COLORS = [
 var SURPRISE_ALC = [
   {bg:"Текила Сънрайз",en:"Tequila Sunrise",badge:null,taste:"sweet",desc:{bg:"текила, фреш портокал, гренадин | 250мл | 5.50€ / 10.76лв",en:"tequila, fresh orange, grenadine | 250ml | 5.50€ / 10.76 BGN"}},
   {bg:"Блъди Мери",en:"Bloody Mary",badge:null,taste:"spicy",desc:{bg:"водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 5.50€ / 10.76лв",en:"vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 5.50€ / 10.76 BGN"}},
-  {bg:"Мохито",en:"Mojito",badge:null,taste:"both",desc:{bg:"ром, мента, лайм, сироп кафява захар, сода | 250мл | 5.50€ / 10.76лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина",en:"rum, mint, lime, brown sugar syrup, soda | 250ml | 5.50€ / 10.76BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry"}},
-  {bg:"Дайкири",en:"Daiquiri",badge:"hot",taste:"fresh",desc:{bg:"ром, захарен сироп, лайм | 180мл | 5.00€ / 9.78лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина",en:"rum, sugar syrup, lime | 180ml | 5.00€ / 9.78BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry"}},
+  {bg:"Мохито",en:"Mojito",badge:null,taste:"both",variants:["classic_abs","mango","strawberry","raspberry"],desc:{bg:"ром, свежи листа от мента, лайм, сироп кафява захар, сода | 250мл | 5.50€ / 10.76лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина",en:"rum, mint, lime, brown sugar syrup, soda | 250ml | 5.50€ / 10.76BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry"}},
+  {bg:"Дайкири",en:"Daiquiri",badge:"hot",taste:"fresh",variants:["classic_abs","mango","strawberry","raspberry"],desc:{bg:"ром, захарен сироп, лайм | 180мл | 5.00€ / 9.78лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина",en:"rum, sugar syrup, lime | 180ml | 5.00€ / 9.78BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry"}},
   {bg:"Лонг Айланд",en:"Long Island",badge:null,taste:"both",desc:{bg:"джин, водка, ром, текила, кола, лайм, коантро | 250мл | 7.00€ / 13.69лв",en:"gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 7.00€ / 13.69 BGN"}},
   {bg:"Синя Лагуна",en:"Blue Lagoon",badge:"hot",taste:"sweet",desc:{bg:"водка, синьо кюрасо, лайм, спрайт | 250мл | 5.50€ / 10.76лв",en:"vodka, blue curacao, lime, sprite | 250ml | 5.50€ / 10.76 BGN"}},
     { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп | 180мл | 5.50€ / 10.76лв", en:"Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup | 180ml | 5.50€ / 10.76 BGN"}},
   {bg:"Палома",en:"Paloma",badge:"new",taste:"fresh",desc:{bg:"текила, лимонада грейпфрут, лайм, Tajín | 250мл | 7.00€ / 13.69лв",en:"tequila, grapefruit lemonade, lime, Tajín | 250ml | 7.00€ / 13.69 BGN"}},
-  {bg:"Маргарита",en:"Margarita",badge:"hot",taste:"fresh",desc:{bg:"текила, коантро, лайм, сол | 180мл | 5.50€ / 10.76лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна",en:"tequila, cointreau, lime, salt | 180ml | 5.50€ / 10.76BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy"}},
+  {bg:"Маргарита",en:"Margarita",badge:"hot",taste:"fresh",variants:["classic_abs","spicy"],desc:{bg:"текила, коантро, лайм, сол | 180мл | 5.50€ / 10.76лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна",en:"tequila, cointreau, lime, salt | 180ml | 5.50€ / 10.76BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy"}},
   {bg:"Куба Либре",en:"Cuba Libre",badge:null,taste:"both",desc:{bg:"тъмен ром, кола, лайм | 250мл | 5.00€ / 9.78лв",en:"dark rum, cola, lime | 250ml | 5.00€ / 9.78 BGN"}},
   {bg:"Аперол Шприц",en:"Aperol Spritz",badge:"hot",taste:"both",desc:{bg:"просеко, аперол, портокал, сода | 250мл | 5.00€ / 9.78лв",en:"prosecco, aperol, orange, soda | 250ml | 5.00€ / 9.78 BGN"}},
-    { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, мента | 250мл | 7.00€ / 13.69лв", en:"Bombay gin, lime juice, lavender syrup, Schweppes pink tonic, mint | 250ml | 7.00€ / 13.69 BGN"}},
+    { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, лавандулов сироп, лилав тоник Швепс, свежи листа от мента | 250мл | 7.00€ / 13.69лв", en:"Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 7.00€ / 13.69 BGN"}},
   {bg:"Кадифена Праскова",en:"Velvet Peach",badge:"hot",taste:"both",desc:{bg:"свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 7.50€ / 14.67лв",en:"fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 7.50€ / 14.67 BGN"}},
     { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, сода | 250мл | 7.00€ / 13.69лв", en:"limoncello, lychee liqueur, prosecco, soda | 180ml | 7.00€ / 13.69 BGN"}},
   {bg:"Секс с Мръсницата",en:"Sex with the Dirty One",badge:"hot",taste:"sweet",desc:{bg:"водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 6.00€ / 11.73лв",en:"vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 6.00€ / 11.73 BGN"}},
@@ -4625,7 +4946,7 @@ var SURPRISE_NON = [
   {bg:"Ягодов Оргазъм",en:"Strawberry Dream",badge:"hot",taste:"creamy",desc:{bg:"сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана | 250мл | 4.50€ / 8.80лв",en:"ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, lime, cream | 250ml | 4.50€ / 8.80 BGN"}},
   {bg:"Тропическо Мангово Маце",en:"Tropical Mango",badge:"new",taste:"creamy",desc:{bg:"пюре от манго, банан, мляко, мед, лайм, сметана | 250мл | 5.00€ / 9.78лв",en:"mango puree, banana, milk, honey, lime, cream | 250ml | 5.00€ / 9.78 BGN"}},
   {bg:"Пинк Бери Тоник",en:"Pink Berry Tonic",badge:"new",taste:"fresh",desc:{bg:"ягоди, малини, лимон, лайм, розов тоник, гренадин | 250мл | 5.50€ / 10.76лв",en:"strawberries, raspberries, lemon, lime, pink tonic, grenadine | 250ml | 5.50€ / 10.76 BGN"}},
-  {bg:"Еспресо Мохито",en:"Espresso Mojito",badge:"new",taste:"both",desc:{bg:"мента, лайм, спрайт, еспресо, захарен сироп | 250мл | 5.50€ / 10.76лв",en:"mint, lime, sprite, espresso, sugar syrup | 250ml | 5.50€ / 10.76 BGN"}}
+  {bg:"Еспресо Мохито",en:"Espresso Mojito",badge:"new",taste:"both",desc:{bg:"свежи листа от мента, лайм, спрайт, еспресо, захарен сироп | 250мл | 5.50€ / 10.76лв",en:"mint, lime, sprite, espresso, sugar syrup | 250ml | 5.50€ / 10.76 BGN"}}
 ];
 
 function openSurprise() {
@@ -4675,24 +4996,45 @@ function renderSurpriseResult(winner, lang) {
   var ingText = parts[0] || descFull;
   var sizeText = parts[1] || '';
   var priceText = parts[2] || '';
-  var varText = parts[3] || '';
-  var eurMatch = priceText.match(new RegExp('([0-9.]+)€'));
+  var eurMatch = priceText.match(/([0-9.]+)€/);
   var bgnMatch = priceText.match(/([0-9.]+) *(?:BGN|lv|лв)/);
+
+  // Name
   document.getElementById('surpriseResultName').textContent = lang==='bg' ? winner.bg : winner.en;
-  var ingDisplay = ingText + (sizeText ? ' · ' + sizeText : '');
-  if (varText) {
-    var cleanVar = varText.replace('✦ Варианти:', '').replace('✦ Variants:', '').trim();
-    var varLines = cleanVar.split('·').map(function(v){return v.trim();}).filter(Boolean);
-    ingDisplay += '\n✦ ' + (lang==='bg' ? 'Варианти' : 'Variants') + ':\n' + varLines.map(function(v){return '· ' + v;}).join('\n');
-  }
-  document.getElementById('surpriseResultIng').style.whiteSpace = 'pre-line';
-  document.getElementById('surpriseResultIng').textContent = ingDisplay;
-  document.getElementById('surprisePriceEur').textContent = eurMatch ? '€' + eurMatch[1] : '';
-  document.getElementById('surprisePriceBgn').textContent = bgnMatch ? bgnMatch[1] + (lang==='bg' ? ' лв' : ' BGN') : '';
+
+  // Badge
   var badgeHtml = '';
   if (winner.badge === 'hot') badgeHtml = '<span class="badge-hot"><span class="badge-icon">&#11088;</span> ' + (lang==='bg' ? 'Най-поръчван' : 'Top Pick') + '</span>';
   else if (winner.badge === 'new') badgeHtml = '<span class="badge-new"><span class="badge-icon">&#x1F525;</span> ' + (lang==='bg' ? 'Ново' : 'New') + '</span>';
   document.getElementById('surpriseBadge').innerHTML = badgeHtml;
+
+  // Build HTML — ingredients (prod-desc style)
+  var html = '<span class="prod-desc">' + ingText + '</span>';
+
+  // Variants — use same code as menu render: varPillClass + varPillLabels
+  if (winner.variants && winner.variants.length) {
+    var pillsHtml = '<div class="var-pills" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.3rem;width:100%;margin:0 auto;">' +
+      winner.variants.map(function(v) {
+        var vpc = window.varPillClass || {}; var vpl = window.varPillLabels || {};
+        return '<span class="var-pill ' + (vpc[v] || '') + '"><span class="var-pill-label ' + (lang === 'en' ? 'var-pill-label-en' : '') + '">' + ((vpl[v] || {})[lang] || v) + '</span></span>';
+      }).join('') +
+        '</div>';
+    html += pillsHtml;
+  }
+
+  // Size — prod-size with golden dot
+  if (sizeText) html += '<span class="prod-size">' + sizeText + '</span>';
+
+  var ing = document.getElementById('surpriseResultIng');
+  ing.innerHTML = html;
+  ing.style.display = 'flex';
+  ing.style.flexDirection = 'column';
+  ing.style.alignItems = 'center';
+  ing.style.textAlign = 'center';
+
+  // Price
+  document.getElementById('surprisePriceEur').textContent = eurMatch ? '€' + eurMatch[1] : '';
+  document.getElementById('surprisePriceBgn').textContent = bgnMatch ? bgnMatch[1] + (lang==='bg' ? ' лв' : ' BGN') : '';
 }
 function startSurprise(type, taste) {
   _surpriseLastType = type;
@@ -4833,7 +5175,10 @@ function openMenuModal(catId) {
   var cat = (window.CATEGORIES||[]).find(function(c){return c.id===catId;});
   if (!cat || !window.renderCategory) return;
   var lang = window.currentLang||'bg';
-  document.getElementById('menuModalTitle').textContent = cat.label[lang];
+  var titleEl = document.getElementById('menuModalTitle');
+  titleEl.textContent = cat.label[lang];
+  // Add 18+ badge only for hot category
+
   document.getElementById('menuModalBody').innerHTML = window.renderCategory(cat, lang);
   document.getElementById('menuModal').classList.add('open');
   lockBodyScroll();
@@ -4847,7 +5192,112 @@ document.getElementById('menuModalClose').addEventListener('click', closeMenuMod
 document.getElementById('menuModalBackdrop').addEventListener('click', closeMenuModal);
 document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenuModal(); });
 </script>
+<div id="promoModal">
+  <div id="promoModalBackdrop"></div>
+  <div id="promoModalBox">
+    <div id="promoModalHeader">
+      <span id="promoModalTitle">&#x1F37E;&nbsp;&nbsp;<span class="t-promo-modal-title">Промоции с бутилки</span></span>
+      <button id="promoModalClose" onclick="closePromoModal()">&#x2715;</button>
+    </div>
+    <div id="promoModalBody">
+      <div class="offer-block">
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name t-pm-n-bg">Finlandia 0.7L<br>+ 4 Red Bull</span>
+            <span class="offer-name t-pm-n-en" style="display:none">Finlandia 0.7L<br>+ 4 Red Bull</span>
+            <div class="offer-items t-pm-items-bg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Finlandia Vodka</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Red Bull</span><span class="offer-item-measure">250мл</span></span></div></div>
+            <div class="offer-items t-pm-items-en" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Finlandia Vodka</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Red Bull</span><span class="offer-item-measure">250ml</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€XX</span>
+            <span class="offer-price-bgn">XX <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name t-pm-n-bg">Johnnie Walker Red 0.7L<br>+ 4 Coca-Cola</span>
+            <span class="offer-name t-pm-n-en" style="display:none">Johnnie Walker Red 0.7L<br>+ 4 Coca-Cola</span>
+            <div class="offer-items t-pm-items-bg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Johnnie Walker Red</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Coca-Cola</span><span class="offer-item-measure">330мл</span></span></div></div>
+            <div class="offer-items t-pm-items-en" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Johnnie Walker Red</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Coca-Cola</span><span class="offer-item-measure">330ml</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€XX</span>
+            <span class="offer-price-bgn">XX <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name t-pm-n-bg">Reyka 0.7L<br>+ 4 Red Bull</span>
+            <span class="offer-name t-pm-n-en" style="display:none">Reyka 0.7L<br>+ 4 Red Bull</span>
+            <div class="offer-items t-pm-items-bg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Reyka Vodka</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Red Bull</span><span class="offer-item-measure">250мл</span></span></div></div>
+            <div class="offer-items t-pm-items-en" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Reyka Vodka</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Red Bull</span><span class="offer-item-measure">250ml</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€XX</span>
+            <span class="offer-price-bgn">XX <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name t-pm-n-bg">Jack Daniel's 0.7L<br>+ 4 Coca-Cola</span>
+            <span class="offer-name t-pm-n-en" style="display:none">Jack Daniel's 0.7L<br>+ 4 Coca-Cola</span>
+            <div class="offer-items t-pm-items-bg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Jack Daniel's</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Coca-Cola</span><span class="offer-item-measure">330мл</span></span></div></div>
+            <div class="offer-items t-pm-items-en" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Jack Daniel's</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Coca-Cola</span><span class="offer-item-measure">330ml</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€XX</span>
+            <span class="offer-price-bgn">XX <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name t-pm-n-bg">Stolichnaya 0.7L<br>+ 4 Perrier</span>
+            <span class="offer-name t-pm-n-en" style="display:none">Stolichnaya 0.7L<br>+ 4 Perrier</span>
+            <div class="offer-items t-pm-items-bg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Stolichnaya</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Perrier</span><span class="offer-item-measure">330мл</span></span></div></div>
+            <div class="offer-items t-pm-items-en" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Stolichnaya</span><span class="offer-item-measure">0.7L</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Perrier</span><span class="offer-item-measure">330ml</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€XX</span>
+            <span class="offer-price-bgn">XX <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<script>
+function openPromoModal() {
+  var lang = window.currentLang || 'bg';
+  var m = document.getElementById('promoModal');
+  var tit = m.querySelector('.t-promo-modal-title');
+  if(tit) tit.textContent = lang==='bg' ? 'Промоции с бутилки' : 'Bottle Promotions';
+  m.querySelectorAll('.t-pm-n-bg').forEach(function(e){ e.style.display=lang==='bg'?'':'none'; });
+  m.querySelectorAll('.t-pm-n-en').forEach(function(e){ e.style.display=lang==='en'?'':'none'; });
+  m.querySelectorAll('.t-pm-items-bg').forEach(function(e){ e.style.display=lang==='bg'?'':'none'; });
+  m.querySelectorAll('.t-pm-items-en').forEach(function(e){ e.style.display=lang==='en'?'':'none'; });
+  m.querySelectorAll('.t-pm-lv').forEach(function(e){ e.style.display=lang==='bg'?'':'none'; });
+  m.querySelectorAll('.t-pm-bgn').forEach(function(e){ e.style.display=lang==='en'?'':'none'; });
+  m.classList.add('open');
+  lockBodyScroll();
+}
+function closePromoModal() {
+  document.getElementById('promoModal').classList.remove('open');
+  unlockBodyScroll();
+}
+document.getElementById('promoModalBackdrop').addEventListener('click', closePromoModal);
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape' && document.getElementById('promoModal').classList.contains('open')) closePromoModal();
+});
+</script>
 <div id="wcModal">
   <div id="wcModalBackdrop"></div>
   <div id="wcModalBox">
@@ -4856,15 +5306,132 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu
       <button id="wcModalClose" onclick="closeWCModal()">&#x2715;</button>
     </div>
     <div id="wcModalBody">
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏁 </span>Начален Удар</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏁 </span>Kick Off</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Чипс със сол</span><span class="wc-item-measure">80г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Sea Salt Chips</span><span class="wc-item-measure">80g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€12.00<br><span class="prod-bgn">23.47 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">⚽ </span>Полувреме Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">⚽ </span>Half Time Combo</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">80г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">80g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€16.00<br><span class="prod-bgn">31.29 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-share-badge t-wc-share">👥 Перфектно за споделяне</span><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏆 </span>Мач Маса</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏆 </span>Match Table</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×4</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Чипс със сол</span><span class="wc-item-measure">160г</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">80г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×4</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Sea Salt Chips</span><span class="wc-item-measure">160g</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">80g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€28.00<br><span class="prod-bgn">54.76 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-share-badge t-wc-share">👥 Перфектно за споделяне</span><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🔥 </span>Продължения</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🔥 </span>Extra Time</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×4</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">160г</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Печено кашу</span><span class="wc-item-measure">100г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×4</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">160g</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Roasted Cashews</span><span class="wc-item-measure">100g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€34.00<br><span class="prod-bgn">66.50 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-share-badge t-wc-share">👥 Перфектно за споделяне</span><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🍺 </span>Бира Бъкет</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🍺 </span>Beer Bucket</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×6</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Чипс със сол</span><span class="wc-item-measure">160г</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">160г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×6</span><span class="wc-item-name">Heineken</span><span class="wc-item-measure">330ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Sea Salt Chips</span><span class="wc-item-measure">160g</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">160g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€42.00<br><span class="prod-bgn">82.14 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-share-badge t-wc-share">👥 Перфектно за споделяне</span><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏆 </span>Шампионско Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏆 </span>Champions Combo</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×6</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×3</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">240г</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Солен Шамфъстък</span><span class="wc-item-measure">100г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×6</span><span class="wc-item-name">Stella Artois</span><span class="wc-item-measure">500ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×3</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">240g</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Salted Pistachios</span><span class="wc-item-measure">100g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€52.00<br><span class="prod-bgn">101.70 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">☀️ </span>Лятно Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">☀️ </span>Summer Match Combo</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Corona</span><span class="wc-item-measure">330мл</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Солени бадеми</span><span class="wc-item-measure">100г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×2</span><span class="wc-item-name">Corona</span><span class="wc-item-measure">330ml</span><span class="wc-item-spacer"></span></div><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Salted Almonds</span><span class="wc-item-measure">100g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€14.00<br><span class="prod-bgn">27.38 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🧂 </span>Солена Пауза</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🧂 </span>Salt Break</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Чипс със сол</span><span class="wc-item-measure">80г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Sea Salt Chips</span><span class="wc-item-measure">80g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€3.50<br><span class="prod-bgn">6.85 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
-    <div class="wc-offer"><div class="wc-offer-row"><div class="wc-offer-info"><span class="wc-offer-name"><span class="t-wc-bg"><span class="wc-emoji">🌽 </span>Начос Зона</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🌽 </span>Nachos Zone</span></span><div class="wc-offer-items t-wc-ibg"><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Начос с Чедър сос</span><span class="wc-item-measure">80г</span><span class="wc-item-spacer"></span></div></div><div class="wc-offer-items t-wc-ien" style="display:none"><div class="wc-item-row"><span class="wc-qty">×1</span><span class="wc-item-name">Nachos with Cheddar Dip</span><span class="wc-item-measure">80g</span><span class="wc-item-spacer"></span></div></div></div><span class="prod-price">€4.00<br><span class="prod-bgn">7.82 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span></span></div></div>
+      <div class="offer-block">
+        
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏁</span> Начален Удар</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏁</span> Kick Off</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Хайнекен</span><span class="offer-item-measure">330мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Чипс със сол</span><span class="offer-item-measure">80г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Heineken</span><span class="offer-item-measure">330ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Sea Salt Chips</span><span class="offer-item-measure">80g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€12.00</span>
+            <span class="offer-price-bgn">23.47 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">⚽</span> Полувреме Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">⚽</span> Half Time Combo</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Стела Артоа</span><span class="offer-item-measure">500мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">80г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Stella Artois</span><span class="offer-item-measure">500ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">80g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€16.00</span>
+            <span class="offer-price-bgn">31.29 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <span class="offer-share-badge t-wc-share">👥 <span class="t-share-bg">Перфектно за споделяне</span><span class="t-share-en" style="display:none">Perfect for sharing</span></span>
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏆</span> Мач Маса</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏆</span> Match Table</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Хайнекен</span><span class="offer-item-measure">330мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Чипс със сол</span><span class="offer-item-measure">160г</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">80г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Heineken</span><span class="offer-item-measure">330ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Sea Salt Chips</span><span class="offer-item-measure">160g</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">80g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€28.00</span>
+            <span class="offer-price-bgn">54.76 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <span class="offer-share-badge t-wc-share">👥 <span class="t-share-bg">Перфектно за споделяне</span><span class="t-share-en" style="display:none">Perfect for sharing</span></span>
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🔥</span> Продължения</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🔥</span> Extra Time</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Стела Артоа</span><span class="offer-item-measure">500мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">160г</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Печено кашу</span><span class="offer-item-measure">100г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;4</span><span class="offer-item-label"><span class="offer-item-name">Stella Artois</span><span class="offer-item-measure">500ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">160g</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Roasted Cashews</span><span class="offer-item-measure">100g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€34.00</span>
+            <span class="offer-price-bgn">66.50 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <span class="offer-share-badge t-wc-share">👥 <span class="t-share-bg">Перфектно за споделяне</span><span class="t-share-en" style="display:none">Perfect for sharing</span></span>
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🍺</span> Бира Бъкет</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🍺</span> Beer Bucket</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;6</span><span class="offer-item-label"><span class="offer-item-name">Хайнекен</span><span class="offer-item-measure">330мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Чипс със сол</span><span class="offer-item-measure">160г</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">160г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;6</span><span class="offer-item-label"><span class="offer-item-name">Heineken</span><span class="offer-item-measure">330ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Sea Salt Chips</span><span class="offer-item-measure">160g</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">160g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€42.00</span>
+            <span class="offer-price-bgn">82.14 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        <span class="offer-share-badge t-wc-share">👥 <span class="t-share-bg">Перфектно за споделяне</span><span class="t-share-en" style="display:none">Perfect for sharing</span></span>
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🏆</span> Шампионско Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🏆</span> Champions Combo</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;6</span><span class="offer-item-label"><span class="offer-item-name">Стела Артоа</span><span class="offer-item-measure">500мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;3</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">240г</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Солен Шамфъстък</span><span class="offer-item-measure">100г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;6</span><span class="offer-item-label"><span class="offer-item-name">Stella Artois</span><span class="offer-item-measure">500ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;3</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">240g</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Salted Pistachios</span><span class="offer-item-measure">100g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€52.00</span>
+            <span class="offer-price-bgn">101.70 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">☀️</span> Лятно Комбо</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">☀️</span> Summer Match Combo</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Корона</span><span class="offer-item-measure">330мл</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Солени бадеми</span><span class="offer-item-measure">100г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;2</span><span class="offer-item-label"><span class="offer-item-name">Corona</span><span class="offer-item-measure">330ml</span></span></div><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Salted Almonds</span><span class="offer-item-measure">100g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€14.00</span>
+            <span class="offer-price-bgn">27.38 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🧂</span> Солена Пауза</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🧂</span> Salt Break</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Чипс със сол</span><span class="offer-item-measure">80г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Sea Salt Chips</span><span class="offer-item-measure">80g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€3.50</span>
+            <span class="offer-price-bgn">6.85 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="offer-block">
+        
+        <div class="offer-row">
+          <div class="offer-info">
+            <span class="offer-name"><span class="t-wc-bg"><span class="wc-emoji">🌽</span> Начос Зона</span><span class="t-wc-en" style="display:none"><span class="wc-emoji">🌽</span> Nachos Zone</span></span>
+            <div class="offer-items t-wc-ibg"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Начос с Чедър сос</span><span class="offer-item-measure">80г</span></span></div></div>
+            <div class="offer-items t-wc-ien" style="display:none"><div class="offer-item-row"><span class="offer-qty">&times;1</span><span class="offer-item-label"><span class="offer-item-name">Nachos with Cheddar Dip</span><span class="offer-item-measure">80g</span></span></div></div>
+          </div>
+          <span class="offer-price-wrap">
+            <span class="offer-price-eur">€4.00</span>
+            <span class="offer-price-bgn">7.82 <span class="t-wc-lv">лв</span><span class="t-wc-bgn" style="display:none">BGN</span></span>
+          </span>
+        </div>
+      </div>
     </div>
     </div>
   </div>
