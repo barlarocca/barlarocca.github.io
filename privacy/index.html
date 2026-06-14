@@ -181,7 +181,11 @@ function applyLangContent(l) {
   document.getElementById('pp-copy').innerHTML = l==='bg' ? '&copy; 2026 Bar La Rocca &mdash; Черноморец' : '&copy; 2026 Bar La Rocca &mdash; Chernomorets';
 }
 
+var currentLang = 'bg';
+
 function ppSetLang(l) {
+  if (l === currentLang) return;
+  currentLang = l;
   var splash = document.getElementById('lang-splash');
   var logo   = document.getElementById('lang-logo');
   var glow   = document.getElementById('lang-glow');
