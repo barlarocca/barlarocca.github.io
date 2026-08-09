@@ -1566,7 +1566,7 @@
                text-shadow: 0 0 10px rgba(201,169,110,0.15);
            }
 
-           /* ─── DUAL PRICE BGN ─── */
+           /* ─── PRICE ─── */
 
            .prod-price {
                line-height: 1.2;
@@ -6097,7 +6097,7 @@
                     ".t-city": "Chernomorets Center, Bulgaria",
                     ".t-est": "Cocktail Bar — 20+ years of history",
                     ".t-tag": "The emblem of nightlife in Chernomorets",
-                    ".t-cta": "Reserve a Table", ".t-place-nav": "Reserve a Table", ".t-spin-hint": "Tap the wheel to spin", ".t-surprise-vid": "Cocktail Type", ".t-premium-note": "❖ With premium alcohol: + 5€/10 BGN", ".t-surprise-vkus": "Taste", ".t-surprise-again": "Again", ".t-surprise-hint": "Pick a random cocktail", ".t-surprise-title": "Alcoholic or Non-Alcoholic?", ".t-surprise-alc": "Alcoholic", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-sweet": "Sweet", ".t-surprise-fresh": "Fresh & Sour", ".t-surprise-both": "Balanced", ".t-surprise-creamy": "Creamy & Dessert", ".t-surprise-spicy": "Spicy & Savoury", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-again": "Again",
+                    ".t-cta": "Reserve a Table", ".t-place-nav": "Reserve a Table", ".t-spin-hint": "Tap the wheel to spin", ".t-surprise-vid": "Cocktail Type", ".t-premium-note": "❖ With premium alcohol: + 5€", ".t-surprise-vkus": "Taste", ".t-surprise-again": "Again", ".t-surprise-hint": "Pick a random cocktail", ".t-surprise-title": "Alcoholic or Non-Alcoholic?", ".t-surprise-alc": "Alcoholic", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-sweet": "Sweet", ".t-surprise-fresh": "Fresh & Sour", ".t-surprise-both": "Balanced", ".t-surprise-creamy": "Creamy & Dessert", ".t-surprise-spicy": "Spicy & Savoury", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-again": "Again",
                     ".t-sc-badge1": "Every Evening", ".t-sc-title1": "Random Cocktail", ".t-sc-sub1": "Tonight's surprise", ".t-sc-cta1": "Spin →",
                     ".t-sc-badge2": "Game", ".t-sc-title2": "Truth or Dare", ".t-sc-sub2": "Bar challenges", ".t-sc-cta2": "Play →",
                     ".t-sc-title3": "Bottle Promotions", ".t-sc-sub3": "8 exclusive offers", ".t-sc-cta3": "See offers →",
@@ -6310,7 +6310,7 @@
 
                     note +
                     '</div>' +
-                    '<span class="prod-price">€' + item.price.toFixed(2) + '<br><span class="prod-bgn">' + (item.price * 1.95583).toFixed(2) + (lang === "en" ? " BGN" : " лв") + '</span></span>' +
+                    '<span class="prod-price">€' + item.price.toFixed(2) + '</span>' +
                     '</div>';
             }
 
@@ -7447,7 +7447,7 @@
                     <div id="surpriseBadge" style="min-height:1.5rem;margin-bottom:.3rem;"></div><div class="surprise-result-name" id="surpriseResultName"></div>
                     <div class="surprise-result-ing" id="surpriseResultIng"></div>
                     <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:.6rem;">
-                        <div class="surprise-price-wrap"><span class="surprise-price-eur" id="surprisePriceEur"></span><span class="surprise-price-bgn" id="surprisePriceBgn"></span></div>
+                        <div class="surprise-price-wrap"><span class="surprise-price-eur" id="surprisePriceEur"></span></div>
                         <button class="surprise-again-btn t-surprise-again" onclick="resetSurprise()">&#x21BA; &#x041e;&#x0442;&#x043d;&#x043e;&#x0432;&#x043e;</button>
                     </div>
                 </div>
@@ -7456,31 +7456,31 @@
     </div>
     <script>
         var SURPRISE_ALC = [
-            { bg: "Текила Сънрайз", en: "Tequila Sunrise", badge: null, taste: "sweet", desc: { bg: "текила, фреш портокал, гренадин | 250мл | 8.50€ / 16.62лв", en: "tequila, fresh orange, grenadine | 250ml | 8.50€ / 16.62 BGN" } },
-            { bg: "Блъди Мери", en: "Bloody Mary", badge: null, taste: "spicy", desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 8.50€ / 16.62лв", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 8.50€ / 16.62 BGN" } },
-            { bg: "Мохито", en: "Mojito", badge: null, taste: "both", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, свежи листа от мента, лайм, сироп кафява захар, сода | 250мл | 8.50€ / 16.62лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, mint, lime, brown sugar syrup, soda | 250ml | 8.50€ / 16.62 BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
-            { bg: "Дайкири", en: "Daiquiri", badge: "hot", taste: "fresh", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, захарен сироп, лайм | 180мл | 8.00€ / 15.65лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, sugar syrup, lime | 180ml | 8.00€ / 15.65 BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
-            { bg: "Лонг Айланд", en: "Long Island", badge: null, taste: "both", desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро | 250мл | 11.00€ / 21.51лв", en: "gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 11.00€ / 21.51 BGN" } },
-            { bg: "Синя Лагуна", en: "Blue Lagoon", badge: "hot", taste: "sweet", desc: { bg: "водка, синьо кюрасо, лайм, спрайт | 250мл | 8.00€ / 15.65лв", en: "vodka, blue curacao, lime, sprite | 250ml | 8.00€ / 15.65 BGN" } },
-            { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп | 180мл | 10.00€ / 19.56лв", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup | 180ml | 10.00€ / 19.56 BGN" } },
-            { bg: "Палома", en: "Paloma", badge: "new", taste: "fresh", desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín | 250мл | 9.50€ / 18.58лв", en: "tequila, grapefruit lemonade, lime, Tajín | 250ml | 9.50€ / 18.58 BGN" } },
-            { bg: "Маргарита", en: "Margarita", badge: "hot", taste: "fresh", variants: ["classic_abs", "spicy"], desc: { bg: "текила, коантро, лайм, сол | 180мл | 8.50€ / 16.62лв | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна", en: "tequila, cointreau, lime, salt | 180ml | 8.50€ / 16.62 BGN | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy" } },
-            { bg: "Куба Либре", en: "Cuba Libre", badge: null, taste: "both", desc: { bg: "тъмен ром, кола, лайм | 250мл | 8.00€ / 15.65лв", en: "dark rum, cola, lime | 250ml | 8.00€ / 15.65 BGN" } },
-            { bg: "Аперол Шприц", en: "Aperol Spritz", badge: "hot", taste: "both", desc: { bg: "просеко, аперол, портокал, сода | 250мл | 8.50€ / 16.62лв", en: "prosecco, aperol, orange, soda | 250ml | 8.50€ / 16.62 BGN" } },
-            { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€ / 19.56лв", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€ / 19.56 BGN" } },
-            { bg: "Кадифена Праскова", en: "Velvet Peach", badge: "hot", taste: "both", desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 10.00€ / 19.56лв", en: "fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 10.00€ / 19.56 BGN" } },
-            { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лaйм | 250мл | 9.00€ / 15.65лв", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€ / 15.65 BGN" } },
-            { bg: "Секс с Мръсницата", en: "Sex with the Dirty One", badge: "hot", taste: "sweet", desc: { bg: "водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 8.00€ / 15.65лв", en: "vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 8.00€ / 15.65 BGN" } },
-            { bg: "Секс на Плажа", en: "Sex on the Beach", badge: "hot", taste: "sweet", desc: { bg: "водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 8.00€ / 15.65лв", en: "vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 8.00€ / 15.65 BGN" } },
-            { bg: "Оргазъм", en: "Orgasm", badge: null, taste: "creamy", desc: { bg: "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 11.00€ / 21.51лв", en: "baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 11.00€ / 21.51 BGN" } }, { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€ / 19.56лв", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€ / 19.56 BGN" } }
-            , { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лайм | 250мл | 9.00€ / 17.60лв", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€ / 17.60 BGN" } }
-            , { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют Ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп, дехидратиран ананас | 180мл | 10.00€ / 19.56лв", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup, dehydrated pineapple | 180ml | 10.00€ / 19.56 BGN" } }
+            { bg: "Текила Сънрайз", en: "Tequila Sunrise", badge: null, taste: "sweet", desc: { bg: "текила, фреш портокал, гренадин | 250мл | 8.50€", en: "tequila, fresh orange, grenadine | 250ml | 8.50€" } },
+            { bg: "Блъди Мери", en: "Bloody Mary", badge: null, taste: "spicy", desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 8.50€", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 8.50€" } },
+            { bg: "Мохито", en: "Mojito", badge: null, taste: "both", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, свежи листа от мента, лайм, сироп кафява захар, сода | 250мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, mint, lime, brown sugar syrup, soda | 250ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
+            { bg: "Дайкири", en: "Daiquiri", badge: "hot", taste: "fresh", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, захарен сироп, лайм | 180мл | 8.00€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, sugar syrup, lime | 180ml | 8.00€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
+            { bg: "Лонг Айланд", en: "Long Island", badge: null, taste: "both", desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро | 250мл | 11.00€", en: "gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 11.00€" } },
+            { bg: "Синя Лагуна", en: "Blue Lagoon", badge: "hot", taste: "sweet", desc: { bg: "водка, синьо кюрасо, лайм, спрайт | 250мл | 8.00€", en: "vodka, blue curacao, lime, sprite | 250ml | 8.00€" } },
+            { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup | 180ml | 10.00€" } },
+            { bg: "Палома", en: "Paloma", badge: "new", taste: "fresh", desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín | 250мл | 9.50€", en: "tequila, grapefruit lemonade, lime, Tajín | 250ml | 9.50€" } },
+            { bg: "Маргарита", en: "Margarita", badge: "hot", taste: "fresh", variants: ["classic_abs", "spicy"], desc: { bg: "текила, коантро, лайм, сол | 180мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна", en: "tequila, cointreau, lime, salt | 180ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy" } },
+            { bg: "Куба Либре", en: "Cuba Libre", badge: null, taste: "both", desc: { bg: "тъмен ром, кола, лайм | 250мл | 8.00€", en: "dark rum, cola, lime | 250ml | 8.00€" } },
+            { bg: "Аперол Шприц", en: "Aperol Spritz", badge: "hot", taste: "both", desc: { bg: "просеко, аперол, портокал, сода | 250мл | 8.50€", en: "prosecco, aperol, orange, soda | 250ml | 8.50€" } },
+            { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } },
+            { bg: "Кадифена Праскова", en: "Velvet Peach", badge: "hot", taste: "both", desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 10.00€", en: "fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 10.00€" } },
+            { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лaйм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } },
+            { bg: "Секс с Мръсницата", en: "Sex with the Dirty One", badge: "hot", taste: "sweet", desc: { bg: "водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 8.00€", en: "vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 8.00€" } },
+            { bg: "Секс на Плажа", en: "Sex on the Beach", badge: "hot", taste: "sweet", desc: { bg: "водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 8.00€", en: "vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 8.00€" } },
+            { bg: "Оргазъм", en: "Orgasm", badge: null, taste: "creamy", desc: { bg: "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 11.00€", en: "baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 11.00€" } }, { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } }
+            , { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лайм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } }
+            , { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют Ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп, дехидратиран ананас | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup, dehydrated pineapple | 180ml | 10.00€" } }
         ];
         var SURPRISE_NON = [
-            { bg: "Ягодов Оргазъм", en: "Strawberry Dream", badge: "hot", taste: "creamy", desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана | 250мл | 7.00€ / 13.69лв", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, lime, cream | 250ml | 7.00€ / 13.69 BGN" } },
-            { bg: "Тропическо Мангово Маце", en: "Tropical Mango", badge: "new", taste: "creamy", desc: { bg: "пюре от манго, банан, мляко, мед, лайм, сметана | 250мл | 7.00€ / 13.69лв", en: "mango puree, banana, milk, honey, lime, cream | 250ml | 7.00€ / 13.69 BGN" } },
-            { bg: "Пинк Бери Тоник", en: "Pink Berry Tonic", badge: "new", taste: "fresh", desc: { bg: "ягоди, малини, лимон, лайм, розов тоник, гренадин | 250мл | 7.00€ / 13.69лв", en: "strawberries, raspberries, lemon, lime, pink tonic, grenadine | 250ml | 7.00€ / 13.69 BGN" } },
-            { bg: "Еспресо Мохито", en: "Espresso Mojito", badge: "new", taste: "both", desc: { bg: "свежи листа от мента, лайм, спрайт, еспресо, захарен сироп | 250мл | 6.50€ / 12.71лв", en: "mint, lime, sprite, espresso, sugar syrup | 250ml | 6.50€ / 12.71 BGN" } }
+            { bg: "Ягодов Оргазъм", en: "Strawberry Dream", badge: "hot", taste: "creamy", desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана | 250мл | 7.00€", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, lime, cream | 250ml | 7.00€" } },
+            { bg: "Тропическо Мангово Маце", en: "Tropical Mango", badge: "new", taste: "creamy", desc: { bg: "пюре от манго, банан, мляко, мед, лайм, сметана | 250мл | 7.00€", en: "mango puree, banana, milk, honey, lime, cream | 250ml | 7.00€" } },
+            { bg: "Пинк Бери Тоник", en: "Pink Berry Tonic", badge: "new", taste: "fresh", desc: { bg: "ягоди, малини, лимон, лайм, розов тоник, гренадин | 250мл | 7.00€", en: "strawberries, raspberries, lemon, lime, pink tonic, grenadine | 250ml | 7.00€" } },
+            { bg: "Еспресо Мохито", en: "Espresso Mojito", badge: "new", taste: "both", desc: { bg: "свежи листа от мента, лайм, спрайт, еспресо, захарен сироп | 250мл | 6.50€", en: "mint, lime, sprite, espresso, sugar syrup | 250ml | 6.50€" } }
         ];
 
         function openSurprise() {
@@ -7531,7 +7531,6 @@
             var sizeText = parts[1] || '';
             var priceText = parts[2] || '';
             var eurMatch = priceText.match(/([0-9.]+)€/);
-            var bgnMatch = priceText.match(/([0-9.]+) *(?:BGN|lv|лв)/);
 
             // Name
             document.getElementById('surpriseResultName').textContent = lang === 'bg' ? winner.bg : winner.en;
@@ -7568,7 +7567,7 @@
 
             // Price
             document.getElementById('surprisePriceEur').textContent = eurMatch ? '€' + eurMatch[1] : '';
-            document.getElementById('surprisePriceBgn').textContent = bgnMatch ? bgnMatch[1] + (lang === 'bg' ? ' лв' : ' BGN') : '';
+            
         }
         function startSurprise(type, taste) {
             _surpriseLastType = type;
@@ -7746,7 +7745,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€50.00</span>
-                            <span class="offer-price-bgn">97.79 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7760,7 +7758,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€50.00</span>
-                            <span class="offer-price-bgn">97.79 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7774,7 +7771,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€65.00</span>
-                            <span class="offer-price-bgn">127.13 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7788,7 +7784,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€50.00</span>
-                            <span class="offer-price-bgn">97.79 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7803,7 +7798,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€51.00</span>
-                            <span class="offer-price-bgn">99.75 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7817,7 +7811,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€78.00</span>
-                            <span class="offer-price-bgn">152.55 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
@@ -7831,7 +7824,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€58.00</span>
-                            <span class="offer-price-bgn">113.44 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
 
                     </div>
@@ -7846,7 +7838,6 @@
                         </div>
                         <span class="offer-price-wrap">
                             <span class="offer-price-eur">€58.00</span>
-                            <span class="offer-price-bgn">113.44 <span class="t-pm-lv">лв</span><span class="t-pm-bgn" style="display:none">BGN</span></span>
                         </span>
                     </div>
                 </div>
