@@ -6074,7 +6074,7 @@
                     ".t-lose-title": "Опитай пак утре",
                     ".t-lose-sub": "Късметът е на страната на смелите \uD83C\uDF40",
                     ".t-lose-btn": "Затвори",
-                    ".t-modal-waiter": "Покажете това на нашия сервитьор", ".t-surprise-vid": "Вид коктейл", ".t-surprise-vkus": "Вкус", ".t-surprise-alc": "Алкохолен", ".t-surprise-non": "Безалкохолен", ".t-surprise-sweet": "Сладък", ".t-surprise-fresh": "Освежаващ", ".t-surprise-both": "Сладко-кисел", ".t-surprise-creamy": "Кремообразен & Десертен", ".t-surprise-spicy": "Пикантен & Солен", ".t-surprise-again": "Отново",
+                    ".t-modal-waiter": "Покажете това на нашия сервитьор", ".t-surprise-vid": "Вид коктейл", ".t-surprise-alctype": "Тип алкохол", ".t-surprise-any": "Изненадай ме", ".t-surprise-vodka": "Водка", ".t-surprise-rum": "Ром", ".t-surprise-gin": "Джин", ".t-surprise-tequila": "Текила", ".t-surprise-spritz": "Шприц", ".t-surprise-vkus": "Вкус", ".t-surprise-alc": "Алкохолен", ".t-surprise-non": "Безалкохолен", ".t-surprise-sweet": "Сладък", ".t-surprise-fresh": "Освежаващ", ".t-surprise-both": "Сладко-кисел", ".t-surprise-creamy": "Кремообразен & Десертен", ".t-surprise-spicy": "Пикантен & Солен", ".t-surprise-again": "Отново",
                     ".t-sc-badge1": "Всяка вечер", ".t-sc-title1": "Случаен коктейл", ".t-sc-sub1": "Изненада на вечерта", ".t-sc-cta1": "Завърти →",
                     ".t-sc-badge2": "Игра", ".t-sc-title2": "Истина или Дързост", ".t-sc-sub2": "Барови предизвикателства", ".t-sc-cta2": "Играй →",
                     ".t-sc-title3": "Промоции с бутилки", ".t-sc-sub3": "8 ексклузивни оферти", ".t-sc-cta3": "Виж офертите →",
@@ -6097,7 +6097,7 @@
                     ".t-city": "Chernomorets Center, Bulgaria",
                     ".t-est": "Cocktail Bar — 20+ years of history",
                     ".t-tag": "The emblem of nightlife in Chernomorets",
-                    ".t-cta": "Reserve a Table", ".t-place-nav": "Reserve a Table", ".t-spin-hint": "Tap the wheel to spin", ".t-surprise-vid": "Cocktail Type", ".t-premium-note": "❖ With premium alcohol: + 5€", ".t-surprise-vkus": "Taste", ".t-surprise-again": "Again", ".t-surprise-hint": "Pick a random cocktail", ".t-surprise-title": "Alcoholic or Non-Alcoholic?", ".t-surprise-alc": "Alcoholic", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-sweet": "Sweet", ".t-surprise-fresh": "Fresh & Sour", ".t-surprise-both": "Balanced", ".t-surprise-creamy": "Creamy & Dessert", ".t-surprise-spicy": "Spicy & Savoury", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-again": "Again",
+                    ".t-cta": "Reserve a Table", ".t-place-nav": "Reserve a Table", ".t-spin-hint": "Tap the wheel to spin", ".t-surprise-vid": "Cocktail Type", ".t-premium-note": "❖ With premium alcohol: + 5€", ".t-surprise-alctype": "Type of Alcohol", ".t-surprise-any": "Surprise Me", ".t-surprise-vodka": "Vodka", ".t-surprise-rum": "Rum", ".t-surprise-gin": "Gin", ".t-surprise-tequila": "Tequila", ".t-surprise-spritz": "Spritz", ".t-surprise-vkus": "Taste", ".t-surprise-again": "Again", ".t-surprise-hint": "Pick a random cocktail", ".t-surprise-title": "Alcoholic or Non-Alcoholic?", ".t-surprise-alc": "Alcoholic", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-sweet": "Sweet", ".t-surprise-fresh": "Fresh & Sour", ".t-surprise-both": "Balanced", ".t-surprise-creamy": "Creamy & Dessert", ".t-surprise-spicy": "Spicy & Savoury", ".t-surprise-non": "Non-Alcoholic", ".t-surprise-again": "Again",
                     ".t-sc-badge1": "Every Evening", ".t-sc-title1": "Random Cocktail", ".t-sc-sub1": "Tonight's surprise", ".t-sc-cta1": "Spin →",
                     ".t-sc-badge2": "Game", ".t-sc-title2": "Truth or Dare", ".t-sc-sub2": "Bar challenges", ".t-sc-cta2": "Play →",
                     ".t-sc-title3": "Bottle Promotions", ".t-sc-sub3": "8 exclusive offers", ".t-sc-cta3": "See offers →",
@@ -7423,14 +7423,25 @@
                     <button class="surprise-choice-btn" onclick="chooseSurpriseType('non')">&#x1F9C3; <span class="t-surprise-non">Безалкохолен</span></button>
                 </div>
             </div>
+            <div id="surpriseStep1a" style="display:none;">
+                <p class="surprise-modal-title t-surprise-alctype">Тип алкохол</p>
+                <div class="surprise-choice-btns">
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('any')">&#x2728; <span class="t-surprise-any">Изненадай ме</span></button>
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('vodka')">&#x1F943; <span class="t-surprise-vodka">Водка</span></button>
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('rum')">&#x1F379; <span class="t-surprise-rum">Ром</span></button>
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('gin')">&#x1F33F; <span class="t-surprise-gin">Джин</span></button>
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('tequila')">&#x1F335; <span class="t-surprise-tequila">Текила</span></button>
+                    <button class="surprise-choice-btn" onclick="chooseSurpriseAlcType('spritz')">&#x1F942; <span class="t-surprise-spritz">Шприц</span></button>
+                </div>
+            </div>
             <div id="surpriseStep1b" style="display:none;">
                 <p class="surprise-modal-title t-surprise-vkus">Вкус</p>
-                <div class="surprise-choice-btns">
-                    <button class="surprise-choice-btn" onclick="startSurpriseTaste('sweet')">&#x1F36F; <span class="t-surprise-sweet">Сладък</span></button>
-                    <button class="surprise-choice-btn" onclick="startSurpriseTaste('fresh')">&#x1F34B; <span class="t-surprise-fresh">Освежаващ</span></button>
-                    <button class="surprise-choice-btn" onclick="startSurpriseTaste('both')">&#x2696;&#xFE0F; <span class="t-surprise-both">Сладко-кисел</span></button>
-                    <button class="surprise-choice-btn" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен & Десертен</span></button>
-                    <button class="surprise-choice-btn" onclick="startSurpriseTaste('spicy')">&#x1F336;&#xFE0F; <span class="t-surprise-spicy">Пикантен & Солен</span></button>
+                <div class="surprise-choice-btns" id="surpriseStep1bBtns">
+                    <button class="surprise-choice-btn" data-taste="sweet" onclick="startSurpriseTaste('sweet')">&#x1F36F; <span class="t-surprise-sweet">Сладък</span></button>
+                    <button class="surprise-choice-btn" data-taste="fresh" onclick="startSurpriseTaste('fresh')">&#x1F34B; <span class="t-surprise-fresh">Освежаващ</span></button>
+                    <button class="surprise-choice-btn" data-taste="both" onclick="startSurpriseTaste('both')">&#x2696;&#xFE0F; <span class="t-surprise-both">Сладко-кисел</span></button>
+                    <button class="surprise-choice-btn" data-taste="creamy" onclick="startSurpriseTaste('creamy')">&#x1F366; <span class="t-surprise-creamy">Кремообразен & Десертен</span></button>
+                    <button class="surprise-choice-btn" data-taste="spicy" onclick="startSurpriseTaste('spicy')">&#x1F336;&#xFE0F; <span class="t-surprise-spicy">Пикантен & Солен</span></button>
                 </div>
             </div>
             <div id="surpriseStep1c" style="display:none;">
@@ -7456,25 +7467,25 @@
     </div>
     <script>
         var SURPRISE_ALC = [
-            { bg: "Текила Сънрайз", en: "Tequila Sunrise", badge: null, taste: "sweet", desc: { bg: "текила, фреш портокал, гренадин | 250мл | 8.50€", en: "tequila, fresh orange, grenadine | 250ml | 8.50€" } },
-            { bg: "Блъди Мери", en: "Bloody Mary", badge: null, taste: "spicy", desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 8.50€", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 8.50€" } },
-            { bg: "Мохито", en: "Mojito", badge: null, taste: "both", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, свежи листа от мента, лайм, сироп кафява захар, сода | 250мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, mint, lime, brown sugar syrup, soda | 250ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
-            { bg: "Дайкири", en: "Daiquiri", badge: "hot", taste: "fresh", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, захарен сироп, лайм | 180мл | 8.00€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, sugar syrup, lime | 180ml | 8.00€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
-            { bg: "Лонг Айланд", en: "Long Island", badge: null, taste: "both", desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро | 250мл | 11.00€", en: "gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 11.00€" } },
-            { bg: "Синя Лагуна", en: "Blue Lagoon", badge: "hot", taste: "sweet", desc: { bg: "водка, синьо кюрасо, лайм, спрайт | 250мл | 8.00€", en: "vodka, blue curacao, lime, sprite | 250ml | 8.00€" } },
-            { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup | 180ml | 10.00€" } },
-            { bg: "Палома", en: "Paloma", badge: "new", taste: "fresh", desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín | 250мл | 9.50€", en: "tequila, grapefruit lemonade, lime, Tajín | 250ml | 9.50€" } },
-            { bg: "Маргарита", en: "Margarita", badge: "hot", taste: "fresh", variants: ["classic_abs", "spicy"], desc: { bg: "текила, коантро, лайм, сол | 180мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна", en: "tequila, cointreau, lime, salt | 180ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy" } },
-            { bg: "Куба Либре", en: "Cuba Libre", badge: null, taste: "both", desc: { bg: "тъмен ром, кола, лайм | 250мл | 8.00€", en: "dark rum, cola, lime | 250ml | 8.00€" } },
-            { bg: "Аперол Шприц", en: "Aperol Spritz", badge: "hot", taste: "both", desc: { bg: "просеко, аперол, портокал, сода | 250мл | 8.50€", en: "prosecco, aperol, orange, soda | 250ml | 8.50€" } },
-            { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } },
-            { bg: "Кадифена Праскова", en: "Velvet Peach", badge: "hot", taste: "both", desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 10.00€", en: "fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 10.00€" } },
-            { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лaйм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } },
-            { bg: "Секс с Мръсницата", en: "Sex with the Dirty One", badge: "hot", taste: "sweet", desc: { bg: "водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 8.00€", en: "vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 8.00€" } },
-            { bg: "Секс на Плажа", en: "Sex on the Beach", badge: "hot", taste: "sweet", desc: { bg: "водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 8.00€", en: "vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 8.00€" } },
-            { bg: "Оргазъм", en: "Orgasm", badge: null, taste: "creamy", desc: { bg: "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 11.00€", en: "baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 11.00€" } }, { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } }
-            , { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", desc: { bg: "лимончело, ликьор личи, просеко, лайм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } }
-            , { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", desc: { bg: "Абсолют Ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп, дехидратиран ананас | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup, dehydrated pineapple | 180ml | 10.00€" } }
+            { bg: "Текила Сънрайз", en: "Tequila Sunrise", badge: null, taste: "sweet", alc: "tequila", desc: { bg: "текила, фреш портокал, гренадин | 250мл | 8.50€", en: "tequila, fresh orange, grenadine | 250ml | 8.50€" } },
+            { bg: "Блъди Мери", en: "Bloody Mary", badge: null, taste: "spicy", alc: "vodka", desc: { bg: "водка, доматен сок, табаско, уорчестър, сол, черен пипер, марината от маслини, лимон | 250мл | 8.50€", en: "vodka, tomato juice, tabasco, worcestershire, salt, black pepper, olive brine, lemon | 250ml | 8.50€" } },
+            { bg: "Мохито", en: "Mojito", badge: null, taste: "both", alc: "rum", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, свежи листа от мента, лайм, сироп кафява захар, сода | 250мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, mint, lime, brown sugar syrup, soda | 250ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
+            { bg: "Дайкири", en: "Daiquiri", badge: "hot", taste: "fresh", alc: "rum", variants: ["classic_abs", "mango", "strawberry", "raspberry"], desc: { bg: "ром, захарен сироп, лайм | 180мл | 8.00€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83E\uDD6D Манго · \uD83C\uDF53 Ягода · \uD83E\uDED0 Малина", en: "rum, sugar syrup, lime | 180ml | 8.00€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83E\uDD6D Mango · \uD83C\uDF53 Strawberry · \uD83E\uDED0 Raspberry" } },
+            { bg: "Лонг Айланд", en: "Long Island", badge: null, taste: "both", alc: "mixed", desc: { bg: "джин, водка, ром, текила, кола, лайм, коантро | 250мл | 11.00€", en: "gin, vodka, rum, tequila, cola, lime, cointreau | 250ml | 11.00€" } },
+            { bg: "Синя Лагуна", en: "Blue Lagoon", badge: "hot", taste: "sweet", alc: "vodka", desc: { bg: "водка, синьо кюрасо, лайм, спрайт | 250мл | 8.00€", en: "vodka, blue curacao, lime, sprite | 250ml | 8.00€" } },
+            { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", alc: "vodka", desc: { bg: "Абсолют ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup | 180ml | 10.00€" } },
+            { bg: "Палома", en: "Paloma", badge: "new", taste: "fresh", alc: "tequila", desc: { bg: "текила, лимонада грейпфрут, лайм, Tajín | 250мл | 9.50€", en: "tequila, grapefruit lemonade, lime, Tajín | 250ml | 9.50€" } },
+            { bg: "Маргарита", en: "Margarita", badge: "hot", taste: "fresh", alc: "tequila", variants: ["classic_abs", "spicy"], desc: { bg: "текила, коантро, лайм, сол | 180мл | 8.50€ | ✦ Варианти: \uD83C\uDF79 Класик · \uD83C\uDF36️ Пикантна", en: "tequila, cointreau, lime, salt | 180ml | 8.50€ | ✦ Variants: \uD83C\uDF79 Classic · \uD83C\uDF36️ Spicy" } },
+            { bg: "Куба Либре", en: "Cuba Libre", badge: null, taste: "both", alc: "rum", desc: { bg: "тъмен ром, кола, лайм | 250мл | 8.00€", en: "dark rum, cola, lime | 250ml | 8.00€" } },
+            { bg: "Аперол Шприц", en: "Aperol Spritz", badge: "hot", taste: "both", alc: "spritz", desc: { bg: "просеко, аперол, портокал, сода | 250мл | 8.50€", en: "prosecco, aperol, orange, soda | 250ml | 8.50€" } },
+            { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", alc: "gin", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } },
+            { bg: "Кадифена Праскова", en: "Velvet Peach", badge: "hot", taste: "both", alc: "spritz", desc: { bg: "свежа праскова, пюре от праскова, ликьор 43, лайм, просеко | 250мл | 10.00€", en: "fresh peach, peach puree, licor 43, lime, prosecco | 250ml | 10.00€" } },
+            { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", alc: "spritz", desc: { bg: "лимончело, ликьор личи, просеко, лaйм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } },
+            { bg: "Секс с Мръсницата", en: "Sex with the Dirty One", badge: "hot", taste: "sweet", alc: "vodka", desc: { bg: "водка, ликьор пъпеш, гренадин, сок ананас, лайм | 250мл | 8.00€", en: "vodka, melon liqueur, grenadine, pineapple juice, lime | 250ml | 8.00€" } },
+            { bg: "Секс на Плажа", en: "Sex on the Beach", badge: "hot", taste: "sweet", alc: "vodka", desc: { bg: "водка, сок ананас, сок праскова, гренадин, ликьор праскова | 250мл | 8.00€", en: "vodka, pineapple juice, peach juice, grenadine, peach liqueur | 250ml | 8.00€" } },
+            { bg: "Оргазъм", en: "Orgasm", badge: null, taste: "creamy", alc: "mixed", desc: { bg: "бейлис, калуа, сладолед, банан, малибу, водка, мляко, сметана | 250мл | 11.00€", en: "baileys, kahlua, ice cream, banana, malibu, vodka, milk, cream | 250ml | 11.00€" } }, { bg: "Лавандулов Бриз", en: "Lavender Breeze", badge: "new", taste: "fresh", alc: "gin", desc: { bg: "джин Бомбай, сок от лайм, сироп от лавандула, лилав тоник Швепс, свежи листа от мента | 250мл | 10.00€", en: "Bombay gin, lime juice, lavender syrup, Schweppes purple tonic, mint | 250ml | 10.00€" } }
+            , { bg: "Лимончело Личи Шприц", en: "Limoncello Lychee Spritz", badge: "new", taste: "both", alc: "spritz", desc: { bg: "лимончело, ликьор личи, просеко, лайм | 250мл | 9.00€", en: "limoncello, lychee liqueur, prosecco, lime | 250ml | 9.00€" } }
+            , { bg: "LA ROCCA Пешън", en: "LA ROCCA Passion", badge: "new", taste: "both", alc: "vodka", desc: { bg: "Абсолют Ванилия, Пасоа, пюре от маракуя, сок от лайм, захарен сироп, дехидратиран ананас | 180мл | 10.00€", en: "Absolut Vanilla, Passoã, passion fruit puree, lime juice, simple syrup, dehydrated pineapple | 180ml | 10.00€" } }
         ];
         var SURPRISE_NON = [
             { bg: "Ягодов Оргазъм", en: "Strawberry Dream", badge: "hot", taste: "creamy", desc: { bg: "сладолед, пресни ягоди, мляко, сироп ягоди, кокосови стърготини, щипка лайм, сметана | 250мл | 7.00€", en: "ice cream, fresh strawberries, milk, strawberry syrup, coconut flakes, lime, cream | 250ml | 7.00€" } },
@@ -7494,17 +7505,35 @@
         function startSurpriseTaste(taste) {
             var c = document.getElementById('surpriseStep1c');
             var stype = (c && c.style.display !== 'none' && c.dataset.stype) ? c.dataset.stype : 'alc';
-            startSurprise(stype, taste);
+            var alcType = document.getElementById('surpriseStep1b').dataset.alctype || null;
+            startSurprise(stype, taste, alcType);
+        }
+        function hideAllSurpriseSteps() {
+            ['surpriseStep1', 'surpriseStep1a', 'surpriseStep1b', 'surpriseStep1c', 'surpriseStep2'].forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
         }
         function chooseSurpriseType(type) {
+            hideAllSurpriseSteps();
             if (type === 'non') {
-                document.getElementById('surpriseStep1').style.display = 'none';
                 document.getElementById('surpriseStep1c').style.display = 'block';
                 document.getElementById('surpriseStep1c').dataset.stype = 'non';
             } else {
-                document.getElementById('surpriseStep1').style.display = 'none';
-                document.getElementById('surpriseStep1b').style.display = 'block';
+                document.getElementById('surpriseStep1a').style.display = 'block';
             }
+        }
+        function chooseSurpriseAlcType(alcType) {
+            hideAllSurpriseSteps();
+            document.getElementById('surpriseStep1b').style.display = 'block';
+            document.getElementById('surpriseStep1b').dataset.alctype = alcType;
+
+            var pool = (alcType && alcType !== 'any') ? SURPRISE_ALC.filter(function (c) { return c.alc === alcType; }) : SURPRISE_ALC;
+            var availableTastes = {};
+            pool.forEach(function (c) { availableTastes[c.taste] = true; });
+            document.querySelectorAll('#surpriseStep1bBtns .surprise-choice-btn').forEach(function (btn) {
+                btn.style.display = availableTastes[btn.dataset.taste] ? '' : 'none';
+            });
         }
         function closeSurprise() {
             document.getElementById('surpriseOverlay').classList.remove('open');
@@ -7513,17 +7542,16 @@
         function closeSurpriseEv(e) { if (e.target === document.getElementById('surpriseOverlay')) closeSurprise(); }
         function resetSurprise() {
             if (_surpriseLastType) {
-                startSurprise(_surpriseLastType, _surpriseLastTaste);
+                startSurprise(_surpriseLastType, _surpriseLastTaste, _surpriseLastAlcType);
             } else {
+                hideAllSurpriseSteps();
                 document.getElementById('surpriseStep1').style.display = 'block';
-                document.getElementById('surpriseStep1b').style.display = 'none';
-                document.getElementById('surpriseStep1c').style.display = 'none';
-                document.getElementById('surpriseStep2').style.display = 'none';
             }
         }
         var _surpriseWinner = null;
         var _surpriseLastType = null;
         var _surpriseLastTaste = null;
+        var _surpriseLastAlcType = null;
         function renderSurpriseResult(winner, lang) {
             var descFull = lang === 'bg' ? winner.desc.bg : winner.desc.en;
             var parts = descFull.split(' | ');
@@ -7569,19 +7597,27 @@
             document.getElementById('surprisePriceEur').textContent = eurMatch ? '€' + eurMatch[1] : '';
             
         }
-        function startSurprise(type, taste) {
+        function startSurprise(type, taste, alcType) {
             _surpriseLastType = type;
             _surpriseLastTaste = taste || null;
-            var pool = type === 'alc' ? SURPRISE_ALC : SURPRISE_NON;
-            if (taste) pool = pool.filter(function (c) { return c.taste === taste; });
-            if (!pool.length) pool = type === 'alc' ? SURPRISE_ALC : SURPRISE_NON;
-            if (!pool.length) pool = type === 'alc' ? SURPRISE_ALC : SURPRISE_NON;
+            _surpriseLastAlcType = alcType || null;
+            var basePool = type === 'alc' ? SURPRISE_ALC : SURPRISE_NON;
+            var pool = basePool;
+            if (type === 'alc' && alcType && alcType !== 'any') {
+                var byAlc = pool.filter(function (c) { return c.alc === alcType; });
+                if (byAlc.length) pool = byAlc;
+            }
+            var alcPool = pool;
+            if (taste) {
+                var byTaste = pool.filter(function (c) { return c.taste === taste; });
+                if (byTaste.length) pool = byTaste;
+                else pool = alcPool;
+            }
+            if (!pool.length) pool = basePool;
             var winner = pool[Math.floor(Math.random() * pool.length)];
             _surpriseWinner = winner;
             var lang = window.currentLang || 'bg';
-            document.getElementById('surpriseStep1').style.display = 'none';
-            document.getElementById('surpriseStep1b').style.display = 'none';
-            document.getElementById('surpriseStep1c').style.display = 'none';
+            hideAllSurpriseSteps();
             document.getElementById('surpriseStep2').style.display = 'block';
             document.getElementById('surpriseResult').style.display = 'none';
             var slot = document.getElementById('surpriseSlot');
